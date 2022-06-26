@@ -5,28 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="/dist/output.css" rel="stylesheet" />
     </head>
-    <body class="bg-zinc-800 text-gray-200">
-        <header class="bg-zinc-900 text-gray-200">
+    <body class="bg-zinc-700 text-gray-800">
+        <header class="bg-zinc-800 text-gray-200 shadow-xl">
             <nav
-                class="container mx-auto relative p-5 flex justify-between items-center box-border"
+                class="container mx-auto relative p-6 flex justify-between items-center box-border"
             >
-                <h1 class="text-2xl"><a href="index.html">NAVBAR</a></h1>
-                <ul class="hidden space-x-6 md:flex">
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                </ul>
-
+                <h1 class="text-2xl font-bold hover:text-white">
+                    <a href="index.html">NAVBAR</a>
+                </h1>
+                <!-- <ul class="hidden space-x-6 md:flex"> -->
+                <!--     <li><a href="#">link</a></li> -->
+                <!--     <li><a href="#">link</a></li> -->
+                <!--     <li><a href="#">link</a></li> -->
+                <!--     <li><a href="#">link</a></li> -->
+                <!-- </ul> -->
                 <!-- hamburger icon -->
                 <button
                     id="menu-btn"
-                    class="hamburger block md:hidden focus:outline-none"
+                    class="hamburger block z-50 md:hidden focus:outline-none"
                 >
                     <span class="hamburger-top"></span>
                     <span class="hamburger-middle"></span>
                     <span class="hamburger-bottom"></span>
                 </button>
+
+                <ul
+                    id="nav-menu"
+                    class="fixed inset-0 left-1/2 py-24 px-6 space-y-6 translate-x-full transition-all ease-in text-2xl bg-zinc-800 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6"
+                >
+                    <li class="hover:text-white"><a href="#">Home</a></li>
+                    <li class="hover:text-white"><a href="#">About</a></li>
+                    <li class="hover:text-white"><a href="#">Contact</a></li>
+                    <li class="hover:text-white"><a href="#">Login</a></li>
+                </ul>
             </nav>
         </header>
         <script src="script.js"></script>
