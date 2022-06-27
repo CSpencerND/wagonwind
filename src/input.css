@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .navbar {
+        @apply container mx-auto relative p-4 flex justify-between items-center box-border;
+    }
+    .slide-from-right {
+        @apply fixed inset-0 left-1/2 py-24 px-6 space-y-6 translate-x-full transition-all ease-in text-2xl bg-zinc-900 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6;
+    }
+}
+
 /* hamburger menu */
 .hamburger {
     cursor: pointer;
@@ -32,18 +41,18 @@
 }
 
 .open {
-  transform: rotate(90deg);
-  transform: translateY(0px);
+    transform: rotate(90deg);
+    transform: translateY(0px);
 }
 
 .open .hamburger-top {
-  transform: rotate(45deg) translateY(6px) translate(6px);
+    transform: rotate(45deg) translateY(6px) translate(6px);
 }
 
 .open .hamburger-middle {
-  display: none;
+    display: none;
 }
 
 .open .hamburger-bottom {
-  transform: rotate(-45deg) translateY(6px) translate(-6px);
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
