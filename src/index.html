@@ -7,7 +7,7 @@
     </head>
 
     <body class="bg-zinc-800 text-gray-800">
-        <header class="bg-zinc-900 text-gray-200 shadow-md sticky top-0">
+        <header class="bg-zinc-900 text-gray-200 shadow-md sticky top-0 z-50">
             <nav class="navbar">
                 <!-- brand logo -->
                 <h1 class="text-2xl font-bold hover:text-white">
@@ -17,7 +17,7 @@
                 <!-- hamburger icon -->
                 <button
                     id="menuButton"
-                    class="hamburger block z-50 md:hidden focus:outline-none"
+                    class="hamburger block md:hidden focus:outline-none z-50"
                 >
                     <span class="hamburger-top"></span>
                     <span class="hamburger-middle"></span>
@@ -37,7 +37,7 @@
         <main class="text-gray-200 py-6">
             <!-- grid system with cards-->
             <section
-                class="container mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 p-6"
+                class="container mx-auto p-6 grid grid-cols-2 lg:grid-cols-4 gap-6"
             >
                 <div
                     class="block p-3 shadow-md shadow-black rounded bg-zinc-700"
@@ -98,7 +98,7 @@
                             <span class="">email</span>
                             <input
                                 type="email"
-                                class="bg-zinc-800 mt-1 block w-full rounded border-current focus:border-cyan-500 focus:ring-0"
+                                class="bg-zinc-800 mt-1 block w-full rounded border-current focus:ring-0 focus:border-cyan-500"
                                 placeholder="person@example.com"
                             />
                         </label>
@@ -118,6 +118,11 @@
                         >
                             Submit
                         </button>
+
+                        <footer class="my-3 flex justify-around">
+                            <span class="text-cyan-500"><a href="#">Forgot Creds?</a></span>
+                            <span class="text-cyan-500"><a href="#">Not A Member?</a></span>
+                        </footer>
                     </form>
                 </div>
             </section>

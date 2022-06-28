@@ -9,6 +9,24 @@
     .slide-from-right {
         @apply fixed inset-0 left-1/2 py-24 px-6 space-y-6 translate-x-full transition-all ease-in text-2xl bg-zinc-900 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6;
     }
+    .card {
+        @apply block p-3 shadow-md shadow-black rounded;
+    }
+    .generic-container {
+        @apply container mx-auto p-6;
+    }
+    .center-content {
+        @apply h-screen flex justify-center items-center;
+    }
+    .form-card {
+        @apply p-6 w-96 shadow-md shadow-black rounded;
+    }
+    .form-label {
+        @apply block my-3;
+    }
+    .form-input {
+        @apply mt-1 block w-full rounded border-current focus:ring-0;
+    }
 }
 
 /* hamburger menu */
