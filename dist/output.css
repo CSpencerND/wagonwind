@@ -957,10 +957,9 @@ select {
 }
 
 .center-screen {
-  display: flex;
+  display: grid;
   height: 100vh;
-  align-items: center;
-  justify-content: center;
+  place-items: center;
 }
 
 .button {
@@ -1026,6 +1025,41 @@ select {
   display: flex;
   justify-content: space-around;
 }
+
+/* modal */
+
+/* this one is for dialog elements */
+
+.modal {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  place-items: center;
+  border-width: 0px;
+  background-color: transparent;
+  padding: 0px;
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.modal::-webkit-backdrop {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  opacity: 0.5;
+}
+
+.modal::backdrop {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  opacity: 0.5;
+}
+
+/* this is for non-dialog elements
+     * .modal {
+     *     @apply fixed inset-0 h-screen w-screen bg-black backdrop-blur bg-opacity-10 grid place-items-center;
+     * }
+     */
 
 .z-50 {
   z-index: 50;
@@ -1113,14 +1147,9 @@ select {
   font-weight: 700;
 }
 
-.text-gray-800 {
+.text-zinc-200 {
   --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
-}
-
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
+  color: rgb(228 228 231 / var(--tw-text-opacity));
 }
 
 .text-zinc-900 {

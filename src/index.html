@@ -6,8 +6,8 @@
         <link href="/dist/output.css" rel="stylesheet" />
     </head>
 
-    <body class="bg-zinc-800 text-gray-800">
-        <header class="sticky-header bg-zinc-900 text-gray-200">
+    <body class="bg-zinc-800 text-zinc-200">
+        <header class="sticky-header bg-zinc-900 text-zinc-200">
             <nav class="navbar">
                 <!-- brand logo -->
                 <h1 class="text-2xl font-bold hover:text-white">
@@ -35,14 +35,14 @@
                     <li class="hover:text-white md:text-base">
                         <a href="#">Contact</a>
                     </li>
-                    <li class="hover:text-white md:text-base">
+                    <li class="hover:text-white md:text-base" id="loginButton">
                         <a href="#">Login</a>
                     </li>
                 </ul>
             </nav>
         </header>
 
-        <main class="text-gray-200 py-6">
+        <main class="text-zinc-200 py-6">
             <!-- grid system with cards-->
             <section
                 class="base-container grid grid-cols-2 lg:grid-cols-4 gap-6"
@@ -78,53 +78,6 @@
                         reprehenderit enim labore culpa sint ad nisi Lorem
                         pariatur mollit ex esse exercitation amet.
                     </p>
-                </div>
-            </section>
-
-            <!-- center content -->
-            <section class="center-screen">
-                <!-- form card -->
-                <div class="form-card-sm bg-zinc-900">
-                    <!-- login form -->
-                    <form class="">
-                        <header class="form-header">
-                            <h2 class="">Login</h2>
-                        </header>
-
-                        <label class="form-label">
-                            <span class="">email</span>
-                            <input
-                                type="email"
-                                class="form-input bg-zinc-800 focus:border-cyan-500"
-                                placeholder="person@example.com"
-                            />
-                        </label>
-
-                        <label class="form-label">
-                            <span class="">password</span>
-                            <input
-                                type="email"
-                                class="form-input bg-zinc-800 focus:border-cyan-500"
-                                placeholder="str0ng&c0mplicat3dpa55word"
-                            />
-                        </label>
-
-                        <button
-                            type="submit"
-                            class="button w-full bg-cyan-500 text-zinc-900"
-                        >
-                            Submit
-                        </button>
-
-                        <footer class="form-footer">
-                            <span class="text-cyan-500"
-                                ><a href="#">Forgot Password?</a></span
-                            >
-                            <span class="text-cyan-500"
-                                ><a href="#">Not A Member?</a></span
-                            >
-                        </footer>
-                    </form>
                 </div>
             </section>
 
@@ -190,12 +143,57 @@
                         >
                             Submit
                         </button>
-
                     </form>
                 </div>
             </section>
         </main>
 
+        <!-- modal -->
+        <dialog class="modal" id="modal">
+            <!-- login form -->
+            <form
+                class="form-card-sm bg-zinc-900 text-zinc-200"
+                method="dialog"
+            >
+                <header class="form-header">
+                    <h2 class="">Login</h2>
+                </header>
+
+                <label class="form-label">
+                    <span class="">email</span>
+                    <input
+                        type="email"
+                        class="form-input bg-zinc-800 focus:border-cyan-500"
+                        placeholder="person@example.com"
+                    />
+                </label>
+
+                <label class="form-label">
+                    <span class="">password</span>
+                    <input
+                        type="email"
+                        class="form-input bg-zinc-800 focus:border-cyan-500"
+                        placeholder="str0ng&c0mplicat3dpa55word"
+                    />
+                </label>
+
+                <button
+                    type="submit"
+                    class="button w-full bg-cyan-500 text-zinc-900"
+                >
+                    Submit
+                </button>
+
+                <footer class="form-footer">
+                    <span class="text-cyan-500"
+                        ><a href="#">Forgot Password?</a></span
+                    >
+                    <span class="text-cyan-500"
+                        ><a href="#">Not A Member?</a></span
+                    >
+                </footer>
+            </form>
+        </dialog>
         <script src="script.js"></script>
     </body>
 </html>

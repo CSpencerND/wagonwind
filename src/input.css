@@ -22,10 +22,10 @@
         @apply container mx-auto p-6;
     }
     .center-screen {
-        @apply h-screen flex justify-center items-center;
+        @apply h-screen grid place-items-center;
     }
     .button {
-        @apply my-4 py-2 px-6 rounded font-bold; 
+        @apply my-4 py-2 px-6 rounded font-bold;
     }
 
     /* form */
@@ -44,6 +44,18 @@
     .form-footer {
         @apply my-4 flex justify-around;
     }
+
+    /* modal */
+    /* this one is for dialog elements */
+    .modal {
+        @apply p-0 border-0 h-screen w-screen grid place-items-center bg-transparent backdrop:bg-black backdrop:opacity-50 backdrop-blur-sm;
+    }
+
+    /* this is for non-dialog elements
+     * .modal {
+     *     @apply fixed inset-0 h-screen w-screen bg-black backdrop-blur bg-opacity-10 grid place-items-center;
+     * }
+     */
 }
 
 /* hamburger menu */
