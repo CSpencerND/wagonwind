@@ -5,7 +5,7 @@
 @layer components {
     /* nav */
     .navbar {
-        @apply container mx-auto relative p-4 flex justify-between items-center box-border;
+        @apply container mx-auto relative py-4 px-6 flex justify-between items-center box-border;
     }
     .sticky-header {
         @apply sticky top-0 z-50 shadow-md shadow-black;
@@ -25,9 +25,9 @@
         @apply h-screen grid place-items-center;
     }
     .button {
-        @apply my-4 py-2 px-6 rounded font-bold;
+        @apply my-4 py-2 px-6 rounded font-bold; 
     }
-
+    
     /* form */
     .form-card-sm {
         @apply py-4 px-8 w-96 shadow-md shadow-black rounded;
@@ -46,10 +46,16 @@
     }
 
     /* modal */
-    /* this one is for dialog elements */
+    /* this one is for dialog elements - works as expected */
     .modal {
-        @apply p-0 border-0 h-screen w-screen grid place-items-center bg-transparent backdrop:bg-black backdrop:opacity-50 backdrop-blur-sm;
+        @apply bg-transparent backdrop:bg-black backdrop:opacity-50;
     }
+
+    /* also for dialog elements - adds blur makes clicking outside not close
+     * .modal {
+     *     @apply p-0 border-0 h-screen w-screen grid place-items-center bg-transparent backdrop:bg-black backdrop:opacity-50 backdrop-blur-sm;
+     * }
+     */
 
     /* this is for non-dialog elements
      * .modal {

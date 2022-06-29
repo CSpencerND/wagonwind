@@ -1,24 +1,30 @@
-// {{{ hamburger menu 
+// {{{ hamburger menu
 const button = document.getElementById("menuButton")
 const nav = document.getElementById("navMenu")
 
 button.addEventListener("click", () => {
     button.classList.toggle("open")
     nav.classList.toggle("translate-x-0")
-    // nav.classList.toggle("translate-x-full")
+})
+
+document.addEventListener("click", (e) => {
+    if (e.target.id !== "navMenu" && e.target.id !== "menuButton") {
+        button.classList.remove("open")
+        nav.classList.remove("translate-x-0")
+    }
 })
 // }}}
 
-// {{{ login modal 
-const modal = document.getElementById("modal")
-const openModal = document.getElementById("loginButton")
+// {{{ login modal
+const loginModal = document.getElementById("loginModal")
+const openLoginModal = document.getElementById("loginButton")
 
-openModal.addEventListener("click", () => {
-    modal.showModal()
+openLoginModal.addEventListener("click", () => {
+    loginModal.showModal()
 })
 
-modal.addEventListener("click", (e) => {
-    const rect = modal.getBoundingClientRect()
+loginModal.addEventListener("click", (e) => {
+    const rect = loginModal.getBoundingClientRect()
 
     if (
         e.clientY < rect.top ||
@@ -26,13 +32,42 @@ modal.addEventListener("click", (e) => {
         e.clientX < rect.left ||
         e.clientX > rect.right
     ) {
-        modal.close()
+        loginModal.close()
     }
 })
 
 document.onkeyup = (event) => {
     if (event.key === "Escape") {
-        modal.close()
+        loginModal.close()
+    }
+}
+// }}}
+
+// {{{ registration modal
+const registrationModal = document.getElementById("registrationModal")
+const openRegistrationModal = document.getElementById("registrationButton")
+
+openRegistrationModal.addEventListener("click", () => {
+    loginModal.close()
+    registrationModal.showModal()
+})
+
+registrationModal.addEventListener("click", (e) => {
+    const rect = registrationModal.getBoundingClientRect()
+
+    if (
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom ||
+        e.clientX < rect.left ||
+        e.clientX > rect.right
+    ) {
+        registrationModal.close()
+    }
+})
+
+document.onkeyup = (event) => {
+    if (event.key === "Escape") {
+        registrationModal.close()
     }
 }
 // }}}

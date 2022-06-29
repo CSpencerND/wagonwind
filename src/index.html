@@ -45,7 +45,7 @@
         <main class="text-zinc-200 py-6">
             <!-- grid system with cards-->
             <section
-                class="base-container grid grid-cols-2 lg:grid-cols-4 gap-6"
+                class="base-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
             >
                 <div class="card bg-zinc-700">
                     <h2 class="font-bold">This is a card title</h2>
@@ -80,76 +80,10 @@
                     </p>
                 </div>
             </section>
-
-            <!-- center content -->
-            <section class="center-screen">
-                <!-- form card -->
-                <div class="form-card-sm bg-zinc-900">
-                    <!-- registration form -->
-                    <form class="">
-                        <header class="form-header">
-                            <h2 class="">Register</h2>
-                        </header>
-
-                        <div id="fullName" class="flex space-x-4">
-                            <label class="form-label">
-                                <span class="">first name</span>
-                                <input
-                                    type="name"
-                                    class="form-input bg-zinc-800 focus:border-cyan-500"
-                                    placeholder="John"
-                                />
-                            </label>
-                            <label class="form-label">
-                                <span class="">last name</span>
-                                <input
-                                    type="name"
-                                    class="form-input bg-zinc-800 focus:border-cyan-500"
-                                    placeholder="Doe"
-                                />
-                            </label>
-                        </div>
-
-                        <label class="form-label mt-0">
-                            <span class="">email</span>
-                            <input
-                                type="email"
-                                class="form-input bg-zinc-800 focus:border-cyan-500"
-                                placeholder="person@example.com"
-                            />
-                        </label>
-
-                        <label class="form-label">
-                            <span class="">password</span>
-                            <input
-                                type="email"
-                                class="form-input bg-zinc-800 focus:border-cyan-500"
-                                placeholder="str0ng&c0mplicat3dpa55word"
-                            />
-                        </label>
-
-                        <label class="form-label">
-                            <span class="">confirm password</span>
-                            <input
-                                type="email"
-                                class="form-input bg-zinc-800 focus:border-cyan-500"
-                                placeholder="str0ng&c0mplicat3dpa55word"
-                            />
-                        </label>
-
-                        <button
-                            type="submit"
-                            class="button w-full bg-cyan-500 text-zinc-900"
-                        >
-                            Submit
-                        </button>
-                    </form>
-                </div>
-            </section>
         </main>
 
         <!-- modal -->
-        <dialog class="modal" id="modal">
+        <dialog class="modal" id="loginModal">
             <!-- login form -->
             <form
                 class="form-card-sm bg-zinc-900 text-zinc-200"
@@ -185,15 +119,81 @@
                 </button>
 
                 <footer class="form-footer">
-                    <span class="text-cyan-500"
-                        ><a href="#">Forgot Password?</a></span
-                    >
-                    <span class="text-cyan-500"
-                        ><a href="#">Not A Member?</a></span
+                    <span class="text-cyan-500">Forgot Password?</span>
+                    <span
+                        class="text-cyan-500 cursor-pointer"
+                        id="registrationButton"
+                        >Not A Member?</span
                     >
                 </footer>
             </form>
         </dialog>
+
+        <dialog class="modal" id="registrationModal">
+            <!-- registration form -->
+            <form
+                class="form-card-sm bg-zinc-900 text-zinc-200"
+                method="dialog"
+            >
+                <header class="form-header">
+                    <h2 class="">Register</h2>
+                </header>
+
+                <div id="fullName" class="flex space-x-4">
+                    <label class="form-label">
+                        <span class="">first name</span>
+                        <input
+                            type="name"
+                            class="form-input bg-zinc-800 focus:border-cyan-500"
+                            placeholder="John"
+                        />
+                    </label>
+                    <label class="form-label">
+                        <span class="">last name</span>
+                        <input
+                            type="name"
+                            class="form-input bg-zinc-800 focus:border-cyan-500"
+                            placeholder="Doe"
+                        />
+                    </label>
+                </div>
+
+                <label class="form-label mt-0">
+                    <span class="">email</span>
+                    <input
+                        type="email"
+                        class="form-input bg-zinc-800 focus:border-cyan-500"
+                        placeholder="person@example.com"
+                    />
+                </label>
+
+                <label class="form-label">
+                    <span class="">password</span>
+                    <input
+                        type="email"
+                        class="form-input bg-zinc-800 focus:border-cyan-500"
+                        placeholder="str0ng&c0mplicat3dpa55word"
+                    />
+                </label>
+
+                <label class="form-label">
+                    <span class="">confirm password</span>
+                    <input
+                        type="email"
+                        class="form-input bg-zinc-800 focus:border-cyan-500"
+                        placeholder="str0ng&c0mplicat3dpa55word"
+                    />
+                </label>
+
+                <button
+                    type="submit"
+                    class="button w-full bg-cyan-500 text-zinc-900"
+                >
+                    Submit
+                </button>
+            </form>
+        </dialog>
+
         <script src="script.js"></script>
     </body>
 </html>
