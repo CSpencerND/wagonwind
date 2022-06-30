@@ -4,6 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="../dist/output.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
     </head>
 
     <body class="bg-zinc-800 text-zinc-200">
@@ -83,7 +90,7 @@
             </section>
 
             <section class="base-container">
-                <!-- TODO: tooltip -->
+                <!-- TODO: consolidate classes to tailwind -->
                 <div
                     class="card max-w-fit mx-auto relative bg-zinc-700 before:shadow-md before:shadow-black before:rounded before:bg-zinc-700"
                     id="tooltipDemo"
@@ -161,7 +168,7 @@
                         <input
                             type="name"
                             class="form-input bg-zinc-800 focus:border-cyan-500"
-                            placeholder="John"
+                            placeholder="Shamona"
                         />
                     </label>
                     <label class="form-label">
@@ -169,7 +176,7 @@
                         <input
                             type="name"
                             class="form-input bg-zinc-800 focus:border-cyan-500"
-                            placeholder="Doe"
+                            placeholder="Hehe"
                         />
                     </label>
                 </div>
@@ -210,6 +217,52 @@
             </form>
         </dialog>
 
+        <dialog open class="modal" id="demoUserModal">
+            <!-- demo user login -->
+            <div
+                class="p-12 shadow-md shadow-black rounded bg-zinc-800 text-zinc-200"
+            >
+                <h2 class="pb-12 text-center text-2xl font-bold">Demo Login</h2>
+                <div class="grid grid-cols-2 gap-12">
+                    <div>
+                        <a
+                            class="grid place-items-center [&>*]:text-rose-500"
+                            href="#"
+                        >
+                            <i class="fa-solid fa-user text-6xl"></i>
+                            <p>Admin</p></a
+                        >
+                    </div>
+                    <div>
+                        <a
+                            class="grid place-items-center [&>*]:text-purple-500"
+                            href="#"
+                        >
+                            <i class="fa-solid fa-user text-6xl"></i>
+                            <p>Manager</p></a
+                        >
+                    </div>
+                    <div>
+                        <a
+                            class="grid place-items-center [&>*]:text-sky-500"
+                            href="#"
+                        >
+                            <i class="fa-solid fa-user text-6xl"></i>
+                            <p>Developer</p></a
+                        >
+                    </div>
+                    <div>
+                        <a
+                            class="grid place-items-center [&>*]:text-yellow-500"
+                            href="#"
+                        >
+                            <i class="fa-solid fa-user text-6xl"></i>
+                            <p>Submitter</p></a
+                        >
+                    </div>
+                </div>
+            </div>
+        </dialog>
         <script src="script.js"></script>
     </body>
 </html>
