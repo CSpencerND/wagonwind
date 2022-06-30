@@ -14,10 +14,15 @@
         @apply fixed inset-0 left-1/2 py-24 px-6 space-y-6 translate-x-full transition-all ease-in text-2xl bg-zinc-900 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6;
     }
 
-    /* general */
+    /* card */
     .card {
         @apply block p-4 shadow-md shadow-black rounded;
     }
+    .card-heading {
+        @apply font-bold -mx-4 -mt-4 mb-2 py-2 px-4 rounded-t;
+    }
+
+    /* general */
     .base-container {
         @apply container mx-auto p-6;
     }
