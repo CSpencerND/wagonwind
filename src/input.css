@@ -30,9 +30,9 @@
         @apply h-screen grid place-items-center;
     }
     .button {
-        @apply my-4 py-2 px-6 rounded font-bold; 
+        @apply my-4 py-2 px-6 rounded font-bold;
     }
-    
+
     /* form */
     .form-card-sm {
         @apply py-4 px-8 w-96 shadow-md shadow-black rounded;
@@ -69,6 +69,46 @@
      */
 }
 
+/* tooltip */
+#tooltipDemo::after,
+#tooltipDemo::before {
+    --scale: 0;
+    /* --tooltip-color: #333; */
+    --arrow-size: 10px;
+
+    position: absolute;
+    top: -0.25rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--translate-y, 0))
+        scale(var(--scale));
+    transition: transform 150ms;
+    transform-origin: bottom center;
+}
+
+#tooltipDemo::before {
+    --translate-y: calc(-100% - var(--arrow-size));
+
+    width: max-content;
+    max-width: 100%;
+    padding: 0.5rem;
+    /* background-color: var(--tooltip-color); */
+    content: attr(data-tooltip);
+}
+#tooltipDemo::after {
+    --translate-y: calc(-1 * var(--arrow-size));
+
+    content: "";
+    border: var(--arrow-size) solid transparent;
+    /* border-top-color: var(--tooltip-color); */
+    border-top-color: #3f3f46;
+    transform-origin: top center;
+}
+
+#tooltipDemo:hover::before,
+#tooltipDemo:hover::after {
+    --scale: 1;
+}
+
 /* hamburger menu */
 .hamburger {
     cursor: pointer;
@@ -90,7 +130,6 @@
     transform: rotate(0);
     transition: all 150ms;
 }
-
 .hamburger-middle {
     transform: translateY(7px);
 }
@@ -102,15 +141,12 @@
     transform: rotate(90deg);
     transform: translateY(0px);
 }
-
 .open .hamburger-top {
     transform: rotate(45deg) translateY(6px) translate(6px);
 }
-
 .open .hamburger-middle {
     display: none;
 }
-
 .open .hamburger-bottom {
     transform: rotate(-45deg) translateY(6px) translate(-6px);
 }
