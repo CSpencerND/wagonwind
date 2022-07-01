@@ -5,12 +5,20 @@ const nav = document.getElementById("navMenu")
 button.addEventListener("click", () => {
     button.classList.toggle("open")
     nav.classList.toggle("translate-x-0")
+
+    if (button.classList.contains("open")) {
+        button.ariaExpanded = true
+    } else button.ariaExpanded = false
 })
 
 document.addEventListener("click", (e) => {
     if (e.target.id !== "navMenu" && e.target.id !== "menuButton") {
         button.classList.remove("open")
         nav.classList.remove("translate-x-0")
+
+        if (button.classList.contains("open")) {
+            button.ariaExpanded = true
+        } else button.ariaExpanded = false
     }
 })
 // }}}

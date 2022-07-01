@@ -11,7 +11,7 @@
         @apply sticky top-0 z-50 shadow-md shadow-black;
     }
     .slide-from-right {
-        @apply fixed inset-0 left-1/2 py-24 px-6 space-y-6 translate-x-full transition-all ease-in text-2xl bg-zinc-900 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6;
+        @apply fixed inset-0 left-1/2 p-[min(30vh,10rem)2em] space-y-6 translate-x-full transition-all ease-out text-2xl bg-zinc-900 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6;
     }
 
     /* card */
