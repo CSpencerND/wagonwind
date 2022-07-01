@@ -1,6 +1,8 @@
 // {{{ hamburger menu
 const button = document.getElementById("menuButton")
 const nav = document.getElementById("navMenu")
+const buttonSpan = document.querySelectorAll(".buttonSpan")
+const main = document.querySelector("main")
 
 button.addEventListener("click", () => {
     button.classList.toggle("open")
@@ -12,13 +14,16 @@ button.addEventListener("click", () => {
 })
 
 document.addEventListener("click", (e) => {
-    if (e.target.id !== "navMenu" && e.target.id !== "menuButton") {
+    if (
+        e.target.id !== "navMenu" &&
+        e.target.id !== "menuButton" &&
+        e.target.className !== "hamburger-top" &&
+        e.target.className !== "hamburger-middle" &&
+        e.target.className !== "hamburger-bottom"
+    ) {
         button.classList.remove("open")
+        button.ariaExpanded = false
         nav.classList.remove("translate-x-0")
-
-        if (button.classList.contains("open")) {
-            button.ariaExpanded = true
-        } else button.ariaExpanded = false
     }
 })
 // }}}
