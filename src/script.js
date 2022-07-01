@@ -71,3 +71,32 @@ document.onkeyup = (event) => {
     }
 }
 // }}}
+
+// {{{ demo user modal
+const demoUserModal = document.getElementById("demoUserModal")
+const openDemoUserModal = document.getElementById("demoUserModalButton")
+
+openDemoUserModal.addEventListener("click", () => {
+    loginModal.close()
+    demoUserModal.showModal()
+})
+
+demoUserModal.addEventListener("click", (e) => {
+    const rect = demoUserModal.getBoundingClientRect()
+
+    if (
+        e.clientY < rect.top ||
+        e.clientY > rect.bottom ||
+        e.clientX < rect.left ||
+        e.clientX > rect.right
+    ) {
+        demoUserModal.close()
+    }
+})
+
+document.onkeyup = (event) => {
+    if (event.key === "Escape") {
+        demoUserModal.close()
+    }
+}
+// }}}

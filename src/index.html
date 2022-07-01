@@ -17,7 +17,7 @@
         <header class="sticky-header bg-zinc-900 text-zinc-200">
             <nav class="navbar">
                 <!-- brand logo -->
-                <h1 class="text-2xl font-bold hover:text-white">
+                <h1 class="text-2xl font-bold hover:text-cyan-500">
                     <a href="index.html">NAVBAR</a>
                 </h1>
 
@@ -33,16 +33,19 @@
 
                 <!-- toggle menu -->
                 <ul id="navMenu" class="slide-from-right">
-                    <li class="hover:text-white md:text-base">
+                    <li class="hover:text-cyan-500 md:text-base">
                         <a href="#">Home</a>
                     </li>
-                    <li class="hover:text-white md:text-base">
+                    <li class="hover:text-cyan-500 md:text-base">
                         <a href="#">About</a>
                     </li>
-                    <li class="hover:text-white md:text-base">
+                    <li class="hover:text-cyan-500 md:text-base">
                         <a href="#">Contact</a>
                     </li>
-                    <li class="hover:text-white md:text-base" id="loginButton">
+                    <li
+                        class="hover:text-cyan-500 md:text-base"
+                        id="loginButton"
+                    >
                         <a href="#">Login</a>
                     </li>
                 </ul>
@@ -122,6 +125,7 @@
                         type="email"
                         class="form-input bg-zinc-800 focus:border-cyan-500"
                         placeholder="person@example.com"
+                        required
                     />
                 </label>
 
@@ -131,6 +135,7 @@
                         type="email"
                         class="form-input bg-zinc-800 focus:border-cyan-500"
                         placeholder="str0ng&c0mplicat3dpa55word"
+                        required
                     />
                 </label>
 
@@ -141,12 +146,17 @@
                     Submit
                 </button>
 
-                <footer class="form-footer">
+                <footer class="grid grid-cols-2 place-items-center gap-4 my-4">
                     <span class="text-cyan-500">Forgot Password?</span>
                     <span
-                        class="text-cyan-500 cursor-pointer"
+                        class="cursor-pointer text-cyan-500"
                         id="registrationButton"
                         >Not A Member?</span
+                    >
+                    <span
+                        class="col-span-2 cursor-pointer text-cyan-500"
+                        id="demoUserModalButton"
+                        >Demo User Login</span
                     >
                 </footer>
             </form>
@@ -168,7 +178,8 @@
                         <input
                             type="name"
                             class="form-input bg-zinc-800 focus:border-cyan-500"
-                            placeholder="Shamona"
+                            placeholder="Terra"
+                            required
                         />
                     </label>
                     <label class="form-label">
@@ -176,7 +187,8 @@
                         <input
                             type="name"
                             class="form-input bg-zinc-800 focus:border-cyan-500"
-                            placeholder="Hehe"
+                            placeholder="Branford"
+                            required
                         />
                     </label>
                 </div>
@@ -187,6 +199,7 @@
                         type="email"
                         class="form-input bg-zinc-800 focus:border-cyan-500"
                         placeholder="person@example.com"
+                        required
                     />
                 </label>
 
@@ -196,6 +209,7 @@
                         type="email"
                         class="form-input bg-zinc-800 focus:border-cyan-500"
                         placeholder="str0ng&c0mplicat3dpa55word"
+                        required
                     />
                 </label>
 
@@ -205,6 +219,7 @@
                         type="email"
                         class="form-input bg-zinc-800 focus:border-cyan-500"
                         placeholder="str0ng&c0mplicat3dpa55word"
+                        required
                     />
                 </label>
 
@@ -217,10 +232,10 @@
             </form>
         </dialog>
 
-        <dialog open class="modal" id="demoUserModal">
+        <dialog class="modal" id="demoUserModal">
             <!-- demo user login -->
             <div
-                class="p-12 shadow-md shadow-black rounded bg-zinc-800 text-zinc-200"
+                class="p-12 w-96 shadow-md shadow-black rounded bg-zinc-800 text-zinc-200"
             >
                 <h2 class="pb-12 text-center text-2xl font-bold">Demo Login</h2>
                 <div class="grid grid-cols-2 gap-12">
@@ -229,8 +244,8 @@
                             class="grid place-items-center [&>*]:text-rose-500"
                             href="#"
                         >
-                            <i class="fa-solid fa-user text-6xl"></i>
-                            <p>Admin</p></a
+                            <i class="fa-regular fa-user text-6xl"></i>
+                            <h3 class="text-2xl">Admin</h3></a
                         >
                     </div>
                     <div>
@@ -238,8 +253,8 @@
                             class="grid place-items-center [&>*]:text-purple-500"
                             href="#"
                         >
-                            <i class="fa-solid fa-user text-6xl"></i>
-                            <p>Manager</p></a
+                            <i class="fa-regular fa-user text-6xl"></i>
+                            <h3 class="text-2xl">Manager</h3></a
                         >
                     </div>
                     <div>
@@ -247,8 +262,8 @@
                             class="grid place-items-center [&>*]:text-sky-500"
                             href="#"
                         >
-                            <i class="fa-solid fa-user text-6xl"></i>
-                            <p>Developer</p></a
+                            <i class="fa-regular fa-user text-6xl"></i>
+                            <h3 class="text-2xl">Developer</h3></a
                         >
                     </div>
                     <div>
@@ -256,8 +271,8 @@
                             class="grid place-items-center [&>*]:text-yellow-500"
                             href="#"
                         >
-                            <i class="fa-solid fa-user text-6xl"></i>
-                            <p>Submitter</p></a
+                            <i class="fa-regular fa-user text-6xl"></i>
+                            <h3 class="text-2xl">Submitter</h3></a
                         >
                     </div>
                 </div>
