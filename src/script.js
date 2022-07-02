@@ -1,16 +1,28 @@
 // {{{ hamburger menu
-const button = document.getElementById("menuButton")
-const nav = document.getElementById("navMenu")
+const navButton = document.getElementById("menuButton")
+const navMenu = document.getElementById("navMenu")
 const buttonSpan = document.querySelectorAll(".buttonSpan")
-const main = document.querySelector("main")
 
-button.addEventListener("click", () => {
-    button.classList.toggle("open")
-    nav.classList.toggle("translate-x-0")
+navButton.addEventListener("click", () => {
+    navButton.classList.toggle("open")
 
-    if (button.classList.contains("open")) {
-        button.ariaExpanded = true
-    } else button.ariaExpanded = false
+    if (navMenu.classList.contains("slide-from-right")) {
+        navMenu.classList.toggle("translate-x-0")
+    } else if (navMenu.classList.contains("slide-from-top")) {
+        navMenu.classList.toggle("translate-y-0")
+    } else if (navMenu.classList.contains("slide-from-left")) {
+        navMenu.classList.toggle("translate-x-0")
+    }
+
+    navMenu.classList.toggle("darken-screen")
+
+    if (navButton.classList.contains("open")) {
+        navButton.ariaExpanded = true
+    } else navButton.ariaExpanded = false
+
+    for (let i of navMenu.children) {
+        i.classList.toggle("opacity-100")
+    }
 })
 
 document.addEventListener("click", (e) => {
@@ -21,9 +33,15 @@ document.addEventListener("click", (e) => {
         e.target.className !== "hamburger-middle" &&
         e.target.className !== "hamburger-bottom"
     ) {
-        button.classList.remove("open")
-        button.ariaExpanded = false
-        nav.classList.remove("translate-x-0")
+        navButton.classList.remove("open")
+        navButton.ariaExpanded = false
+        navMenu.classList.remove("translate-x-0")
+        navMenu.classList.remove("translate-y-0")
+        navMenu.classList.remove("darken-screen")
+
+        for (let i of navMenu.children) {
+            i.classList.remove("opacity-100")
+        }
     }
 })
 // }}}

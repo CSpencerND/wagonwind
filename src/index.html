@@ -14,51 +14,48 @@
     </head>
 
     <body class="overflow-x-hidden bg-zinc-800 text-zinc-200">
-        <header class="sticky-header bg-zinc-900 text-zinc-200">
+        <header class="sticky-top std-shadow bg-zinc-900 text-zinc-200">
             <nav class="navbar">
                 <!-- brand logo -->
-                <h1 class="text-2xl font-bold hover:text-cyan-500">
+                <h1 class="text-2xl font-bold z-50 hover:text-cyan-500">
                     <a href="index.html">NAVBAR</a>
                 </h1>
 
                 <!-- hamburger icon -->
                 <button
                     id="menuButton"
-                    class="hamburger block md:hidden focus:outline-none z-50 hover:text-cyan-500"
+                    class="hamburger hover:text-cyan-500"
                     aria-controls="navMenu"
                     aria-expanded="false"
                 >
                     <span class="sr-only">Menu</span>
-                    <span
-                        class="hamburger-top"
-                        aria-hidden="true"
-                    ></span>
-                    <span
-                        class="hamburger-middle"
-                        aria-hidden="true"
-                    ></span>
-                    <span
-                        class="hamburger-bottom"
-                        aria-hidden="true"
-                    ></span>
+                    <span class="hamburger-top" aria-hidden="true"></span>
+                    <span class="hamburger-middle" aria-hidden="true"></span>
+                    <span class="hamburger-bottom" aria-hidden="true"></span>
                 </button>
 
                 <!-- toggle menu -->
-                <ul id="navMenu" class="slide-from-right">
-                    <li class="hover:text-cyan-500 md:text-base">
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="hover:text-cyan-500 md:text-base">
-                        <a href="#">About</a>
-                    </li>
-                    <li class="hover:text-cyan-500 md:text-base">
-                        <a href="#">Contact</a>
+                <ul id="navMenu" class="slide-from-right bg-zinc-900">
+                    <li
+                        class="nav-item hover:text-cyan-500 hover:bg-zinc-800 md:text-base md:hover:bg-inherit"
+                    >
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li
-                        class="hover:text-cyan-500 md:text-base"
+                        class="nav-item hover:text-cyan-500 hover:bg-zinc-800 md:text-base md:hover:bg-inherit"
+                    >
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li
+                        class="nav-item hover:text-cyan-500 hover:bg-zinc-800 md:text-base md:hover:bg-inherit"
+                    >
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li
+                        class="nav-item hover:text-cyan-500 hover:bg-zinc-800 md:text-base md:hover:bg-inherit"
                         id="loginButton"
                     >
-                        <a href="#">Login</a>
+                        <a class="nav-link" href="#">Login</a>
                     </li>
                 </ul>
             </nav>
@@ -67,9 +64,9 @@
         <main class="text-zinc-200 py-6">
             <!-- grid system with cards-->
             <section
-                class="base-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
+                class="std-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
             >
-                <div class="card bg-zinc-800">
+                <div class="card std-shadow bg-zinc-800">
                     <h2 class="card-heading bg-zinc-900">This is a card</h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
@@ -77,7 +74,7 @@
                         pariatur mollit ex esse exercitation amet.
                     </p>
                 </div>
-                <div class="card bg-zinc-800">
+                <div class="card std-shadow bg-zinc-800">
                     <h2 class="card-heading bg-zinc-900">This is a card</h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
@@ -85,7 +82,7 @@
                         pariatur mollit ex esse exercitation amet.
                     </p>
                 </div>
-                <div class="card bg-zinc-800">
+                <div class="card std-shadow bg-zinc-800">
                     <h2 class="card-heading bg-zinc-900">This is a card</h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
@@ -94,7 +91,7 @@
                     </p>
                 </div>
 
-                <div class="card bg-zinc-800">
+                <div class="card std-shadow bg-zinc-800">
                     <h2 class="card-heading bg-zinc-900">This is a card</h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
@@ -104,10 +101,10 @@
                 </div>
             </section>
 
-            <section class="base-container">
+            <section class="std-container">
                 <!-- TODO: consolidate classes to tailwind -->
                 <div
-                    class="card max-w-fit mx-auto relative bg-zinc-700 before:shadow-md before:shadow-black before:rounded before:bg-zinc-700"
+                    class="card std-shadow max-w-fit mx-auto relative bg-zinc-700 before:shadow-md before:shadow-black before:rounded before:bg-zinc-700"
                     id="tooltipDemo"
                     data-tooltip="I'm a tooltip!"
                 >
@@ -246,9 +243,7 @@
 
         <dialog class="modal" id="demoUserModal">
             <!-- demo user login -->
-            <div
-                class="p-12 w-96 shadow-md shadow-black rounded bg-zinc-800 text-zinc-200"
-            >
+            <div class="p-12 w-96 rounded bg-zinc-800 text-zinc-200">
                 <h2 class="pb-12 text-center text-2xl font-bold">Demo Login</h2>
                 <div class="grid grid-cols-2 gap-12">
                     <div>

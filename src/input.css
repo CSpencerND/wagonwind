@@ -3,27 +3,8 @@
 @tailwind utilities;
 
 @layer components {
-    /* nav */
-    .navbar {
-        @apply container mx-auto relative py-4 px-6 flex justify-between items-center box-border;
-    }
-    .sticky-header {
-        @apply sticky top-0 z-50 shadow-md shadow-black;
-    }
-    .slide-from-right {
-        @apply fixed inset-0 left-1/2 p-[min(30vh,10rem)2em] space-y-6 translate-x-full transition-all ease-out text-2xl bg-zinc-900 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6;
-    }
-
-    /* card */
-    .card {
-        @apply block p-4 shadow-md shadow-black rounded;
-    }
-    .card-heading {
-        @apply font-bold -mx-4 -mt-4 mb-2 py-2 px-4 rounded-t;
-    }
-
     /* general */
-    .base-container {
+    .std-container {
         @apply container mx-auto p-6;
     }
     .center-screen {
@@ -32,10 +13,50 @@
     .button {
         @apply my-4 py-2 px-6 rounded font-bold;
     }
+    .std-shadow {
+        @apply shadow-md shadow-black;
+    }
+    .darken-screen {
+        @apply shadow-[0_0_0_9999px_#000000b3];
+    }
+
+    /* nav */
+    .sticky-top {
+        @apply sticky top-0 z-50;
+    }
+    .navbar {
+        @apply std-container max-w-screen-2xl z-50 relative py-4 px-6 flex justify-between items-center box-border md:min-w-0;
+    }
+    .hamburger {
+        @apply block focus:outline-none z-50 md:hidden;
+    }
+    .slide-from-right {
+        @apply translate-x-full left-2/3 z-40 rounded-l-xl border-l fixed inset-0 pt-16 transition-all ease-out text-2xl md:border-0 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6;
+    }
+    .slide-from-left {
+        @apply -translate-x-full right-2/3 z-40 rounded-r-xl border-r fixed inset-0 pt-16 transition-all ease-out text-2xl md:border-0 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6;
+    }
+    .slide-from-top {
+        @apply -translate-y-full bottom-1/2 z-40 rounded-b-xl border-b fixed inset-0 pt-16 transition-all ease-out text-2xl md:border-0 md:static md:p-0 md:space-y-0 md:translate-y-0 md:inline-flex md:items-center md:gap-6;
+    }
+    .nav-item {
+        @apply opacity-0 transition-opacity delay-150 ease-in md:opacity-100;
+    }
+    .nav-link {
+        @apply p-6 block md:p-0;
+    }
+
+    /* card */
+    .card {
+        @apply block p-4 rounded;
+    }
+    .card-heading {
+        @apply font-bold -mx-4 -mt-4 mb-2 py-2 px-4 rounded-t;
+    }
 
     /* form */
     .form-card-sm {
-        @apply py-4 px-8 w-96 shadow-md shadow-black rounded;
+        @apply py-4 px-8 w-96 rounded;
     }
     .form-header {
         @apply my-4 text-center text-2xl font-bold;
@@ -53,7 +74,7 @@
     /* modal */
     /* this one is for dialog elements - works as expected */
     .modal {
-        @apply bg-transparent backdrop:bg-black backdrop:opacity-50;
+        @apply p-0 bg-transparent backdrop:bg-black backdrop:opacity-70;
     }
 
     /* also for dialog elements - adds blur makes clicking outside not close
@@ -113,7 +134,7 @@
 .hamburger {
     cursor: pointer;
     width: 24px;
-    height: 14px;
+    height: 24px;
     transition: all 150ms;
     position: relative;
 }
@@ -130,11 +151,14 @@
     transform: rotate(0);
     transition: all 150ms;
 }
+.hamburger-top {
+    transform: translateY(4px);
+}
 .hamburger-middle {
-    transform: translateY(7px);
+    transform: translateY(12px);
 }
 .hamburger-bottom {
-    transform: translateY(14px);
+    transform: translateY(20px);
 }
 
 .open {
@@ -142,11 +166,11 @@
     transform: translateY(0px);
 }
 .open .hamburger-top {
-    transform: rotate(45deg) translateY(6px) translate(6px);
+    transform: rotate(45deg) translateY(8px) translate(8px);
 }
 .open .hamburger-middle {
     display: none;
 }
 .open .hamburger-bottom {
-    transform: rotate(-45deg) translateY(6px) translate(-6px);
+    transform: rotate(-45deg) translateY(8px) translate(-8px);
 }
