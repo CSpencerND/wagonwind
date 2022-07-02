@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark">
+<html id="html" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,18 +13,23 @@
         />
     </head>
 
-    <body class="overflow-x-hidden dark:bg-dark-primary dark:text-dark-primary">
-        <header class="sticky-top std-shadow dark:bg-dark-secondary dark:text-dark-primary">
+    <body
+        class="overflow-x-hidden bg-light-primary dark:bg-dark-primary text-light-primary dark:text-dark-primary"
+    >
+        <header
+            class="sticky-top std-shadow bg-light-secondary dark:bg-dark-secondary text-light-primary dark:text-dark-primary"
+        >
             <nav class="navbar">
                 <!-- brand logo -->
-                <h1 class="text-2xl font-bold z-50 hover:text-cyan-500">
+                <h1 class="text-2xl font-bold z-50 hover:text-action">
                     <a href="index.html">NAVBAR</a>
                 </h1>
 
                 <!-- hamburger icon -->
                 <button
                     id="menuButton"
-                    class="hamburger hover:text-cyan-500"
+                    class="hamburger hover:text-action"
+                    type="menu"
                     aria-controls="navMenu"
                     aria-expanded="false"
                 >
@@ -35,24 +40,34 @@
                 </button>
 
                 <!-- toggle menu -->
-                <ul id="navMenu" class="slide-from-right dark:bg-dark-secondary">
+                <ul
+                    id="navMenu"
+                    class="slide-from-right bg-light-primary dark:bg-dark-secondary md:bg-light-secondary"
+                >
                     <li
-                        class="nav-item hover:text-cyan-500 hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit"
+                        class="nav-item hover:text-action hover:bg-light-secondary hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit md:hover:dark:bg-inherit"
+                    >
+                        <button type="button" id="darkToggle">
+                            <i id="sunMoon" class="fa-regular fa-moon nav-link"></i>
+                        </button>
+                    </li>
+                    <li
+                        class="nav-item hover:text-action hover:bg-light-secondary hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit md:hover:dark:bg-inherit"
                     >
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li
-                        class="nav-item hover:text-cyan-500 hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit"
+                        class="nav-item hover:text-action hover:bg-light-secondary hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit md:hover:dark:bg-inherit"
                     >
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li
-                        class="nav-item hover:text-cyan-500 hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit"
+                        class="nav-item hover:text-action hover:bg-light-secondary hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit md:hover:dark:bg-inherit"
                     >
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li
-                        class="nav-item hover:text-cyan-500 hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit"
+                        class="nav-item hover:text-action hover:bg-light-secondary hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit md:hover:dark:bg-inherit"
                         id="loginButton"
                     >
                         <a class="nav-link" href="#">Login</a>
@@ -61,29 +76,47 @@
             </nav>
         </header>
 
-        <main class="text-dark-primary py-6">
+        <main class="text-light-primary dark:text-dark-primary py-6">
             <!-- grid system with cards-->
             <section
                 class="std-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
             >
-                <div class="card std-shadow dark:bg-dark-primary">
-                    <h2 class="card-heading dark:bg-dark-secondary">This is a card</h2>
+                <div
+                    class="card std-shadow bg-light-primary dark:bg-dark-primary"
+                >
+                    <h2
+                        class="card-heading bg-light-secondary dark:bg-dark-secondary"
+                    >
+                        This is a card
+                    </h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                         reprehenderit enim labore culpa sint ad nisi Lorem
                         pariatur mollit ex esse exercitation amet.
                     </p>
                 </div>
-                <div class="card std-shadow dark:bg-dark-primary">
-                    <h2 class="card-heading dark:bg-dark-secondary">This is a card</h2>
+                <div
+                    class="card std-shadow bg-light-primary dark:bg-dark-primary"
+                >
+                    <h2
+                        class="card-heading bg-light-secondary dark:bg-dark-secondary"
+                    >
+                        This is a card
+                    </h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                         reprehenderit enim labore culpa sint ad nisi Lorem
                         pariatur mollit ex esse exercitation amet.
                     </p>
                 </div>
-                <div class="card std-shadow dark:bg-dark-primary">
-                    <h2 class="card-heading dark:bg-dark-secondary">This is a card</h2>
+                <div
+                    class="card std-shadow bg-light-primary dark:bg-dark-primary"
+                >
+                    <h2
+                        class="card-heading bg-light-secondary dark:bg-dark-secondary"
+                    >
+                        This is a card
+                    </h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                         reprehenderit enim labore culpa sint ad nisi Lorem
@@ -91,8 +124,14 @@
                     </p>
                 </div>
 
-                <div class="card std-shadow dark:bg-dark-primary">
-                    <h2 class="card-heading dark:bg-dark-secondary">This is a card</h2>
+                <div
+                    class="card std-shadow bg-light-primary dark:bg-dark-primary"
+                >
+                    <h2
+                        class="card-heading bg-light-secondary dark:bg-dark-secondary"
+                    >
+                        This is a card
+                    </h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                         reprehenderit enim labore culpa sint ad nisi Lorem
@@ -104,7 +143,7 @@
             <section class="std-container">
                 <!-- TODO: consolidate classes to tailwind -->
                 <div
-                    class="card std-shadow max-w-fit mx-auto relative dark:bg-zinc-700 before:shadow-md before:shadow-black before:rounded before:dark:bg-zinc-700"
+                    class="card std-shadow max-w-fit mx-auto relative bg-light-secondary dark:bg-zinc-700 before:shadow-md before:shadow-black before:rounded before:bg-light-secondary before:dark:bg-zinc-700"
                     id="tooltipDemo"
                     data-tooltip="I'm a tooltip!"
                 >
@@ -121,7 +160,7 @@
         <dialog class="modal" id="loginModal">
             <!-- login form -->
             <form
-                class="form-card-sm bg-dark-secondary text-dark-primary"
+                class="form-card-sm bg-light-secondary dark:bg-dark-secondary text-light-primary dark:text-dark-primary"
                 method="dialog"
             >
                 <header class="form-header">
@@ -132,7 +171,7 @@
                     <span class="">email</span>
                     <input
                         type="email"
-                        class="form-input bg-dark-primary focus:border-cyan-500"
+                        class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
                         placeholder="person@example.com"
                         required
                     />
@@ -142,7 +181,7 @@
                     <span class="">password</span>
                     <input
                         type="password"
-                        class="form-input bg-dark-primary focus:border-cyan-500"
+                        class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
                         placeholder="str0ng&c0mplicat3dpa55word"
                         required
                     />
@@ -150,20 +189,23 @@
 
                 <button
                     type="submit"
-                    class="button w-full bg-cyan-500 text-light-primary"
+                    class="button w-full bg-action text-light-primary hover:bg-cyan-400 hover:scale-105 transition-all"
                 >
                     Submit
                 </button>
 
                 <footer class="grid grid-cols-2 place-items-center gap-4 my-4">
-                    <span class="text-cyan-500">Forgot Password?</span>
                     <span
-                        class="cursor-pointer text-cyan-500"
+                        class="cursor-pointer text-action hover:text-cyan-400 transition-colors"
+                        >Forgot Password?</span
+                    >
+                    <span
+                        class="cursor-pointer text-action hover:text-cyan-400 transition-colors"
                         id="registrationButton"
                         >Not A Member?</span
                     >
                     <span
-                        class="col-span-2 cursor-pointer text-cyan-500"
+                        class="col-span-2 cursor-pointer text-action hover:text-cyan-400 transition-colors"
                         id="demoUserModalButton"
                         >Demo User Login</span
                     >
@@ -174,7 +216,7 @@
         <dialog class="modal" id="registrationModal">
             <!-- registration form -->
             <form
-                class="form-card-sm bg-dark-secondary text-dark-primary"
+                class="form-card-sm bg-light-secondary dark:bg-dark-secondary text-light-primary dark:text-dark-primary"
                 method="dialog"
             >
                 <header class="form-header">
@@ -186,7 +228,7 @@
                         <span class="">first name</span>
                         <input
                             type="name"
-                            class="form-input bg-dark-primary focus:border-cyan-500"
+                            class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
                             placeholder="Terra"
                             required
                         />
@@ -195,7 +237,7 @@
                         <span class="">last name</span>
                         <input
                             type="name"
-                            class="form-input bg-dark-primary focus:border-cyan-500"
+                            class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
                             placeholder="Branford"
                             required
                         />
@@ -206,7 +248,7 @@
                     <span class="">email</span>
                     <input
                         type="email"
-                        class="form-input bg-dark-primary focus:border-cyan-500"
+                        class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
                         placeholder="person@example.com"
                         required
                     />
@@ -216,7 +258,7 @@
                     <span class="">password</span>
                     <input
                         type="password"
-                        class="form-input bg-dark-primary focus:border-cyan-500"
+                        class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
                         placeholder="str0ng&c0mplicat3dpa55word"
                         required
                     />
@@ -226,7 +268,7 @@
                     <span class="">confirm password</span>
                     <input
                         type="password"
-                        class="form-input bg-dark-primary focus:border-cyan-500"
+                        class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
                         placeholder="str0ng&c0mplicat3dpa55word"
                         required
                     />
@@ -234,7 +276,7 @@
 
                 <button
                     type="submit"
-                    class="button w-full bg-cyan-500 text-light-primary"
+                    class="button w-full bg-action text-light-primary hover:bg-cyan-400 hover:scale-105 transition-all"
                 >
                     Submit
                 </button>
@@ -243,7 +285,9 @@
 
         <dialog class="modal" id="demoUserModal">
             <!-- demo user login -->
-            <div class="p-12 w-96 rounded bg-dark-primary text-dark-primary">
+            <div
+                class="p-12 w-96 rounded bg-light-secondary dark:bg-dark-primary text-light-primary dark:text-dark-primary"
+            >
                 <h2 class="pb-12 text-center text-2xl font-bold">Demo Login</h2>
                 <div class="grid grid-cols-2 gap-12">
                     <div>

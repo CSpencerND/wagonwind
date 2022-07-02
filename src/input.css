@@ -43,7 +43,7 @@
         @apply opacity-0 transition-opacity delay-150 ease-in md:opacity-100;
     }
     .nav-link {
-        @apply p-6 block md:p-0;
+        @apply px-6 py-4 block md:p-0;
     }
 
     /* card */
@@ -65,7 +65,7 @@
         @apply block my-4;
     }
     .form-input {
-        @apply my-1 block w-full rounded border-current focus:ring-0;
+        @apply my-1 block w-full rounded border-zinc-400 focus:ring-1;
     }
     .form-footer {
         @apply my-4 flex justify-around;
@@ -113,6 +113,19 @@
     }
     .bg-dark-secondary {
         @apply bg-zinc-900;
+    }
+
+    .text-action {
+        @apply text-cyan-600;
+    }
+    .bg-action {
+        @apply bg-cyan-600;
+    }
+    .border-action {
+        @apply border-cyan-600;
+    }
+    .outline-action {
+        @apply outline-cyan-600;
     }
 }
 

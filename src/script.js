@@ -132,7 +132,12 @@ document.onkeyup = (event) => {
 }
 // }}}
 
-// const darkToggle = document.querySelector("darkToggle")
-// darkToggle.onclick = () => {
-//     html.classList.toggle("dark")
-// }
+const html = document.getElementById("html")
+const darkToggle = document.getElementById("darkToggle")
+const sunMoon = document.getElementById("sunMoon")
+
+darkToggle.addEventListener("click", () => {
+    html.classList.toggle("dark")
+    sunMoon.classList.toggle("fa-moon")
+    sunMoon.classList.toggle("fa-sun")
+})
