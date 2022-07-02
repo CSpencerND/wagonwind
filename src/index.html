@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,8 +13,8 @@
         />
     </head>
 
-    <body class="overflow-x-hidden bg-zinc-800 text-zinc-200">
-        <header class="sticky-top std-shadow bg-zinc-900 text-zinc-200">
+    <body class="overflow-x-hidden dark:bg-dark-primary dark:text-dark-primary">
+        <header class="sticky-top std-shadow dark:bg-dark-secondary dark:text-dark-primary">
             <nav class="navbar">
                 <!-- brand logo -->
                 <h1 class="text-2xl font-bold z-50 hover:text-cyan-500">
@@ -35,24 +35,24 @@
                 </button>
 
                 <!-- toggle menu -->
-                <ul id="navMenu" class="slide-from-right bg-zinc-900">
+                <ul id="navMenu" class="slide-from-right dark:bg-dark-secondary">
                     <li
-                        class="nav-item hover:text-cyan-500 hover:bg-zinc-800 md:text-base md:hover:bg-inherit"
+                        class="nav-item hover:text-cyan-500 hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit"
                     >
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li
-                        class="nav-item hover:text-cyan-500 hover:bg-zinc-800 md:text-base md:hover:bg-inherit"
+                        class="nav-item hover:text-cyan-500 hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit"
                     >
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li
-                        class="nav-item hover:text-cyan-500 hover:bg-zinc-800 md:text-base md:hover:bg-inherit"
+                        class="nav-item hover:text-cyan-500 hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit"
                     >
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li
-                        class="nav-item hover:text-cyan-500 hover:bg-zinc-800 md:text-base md:hover:bg-inherit"
+                        class="nav-item hover:text-cyan-500 hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit"
                         id="loginButton"
                     >
                         <a class="nav-link" href="#">Login</a>
@@ -61,29 +61,29 @@
             </nav>
         </header>
 
-        <main class="text-zinc-200 py-6">
+        <main class="text-dark-primary py-6">
             <!-- grid system with cards-->
             <section
                 class="std-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
             >
-                <div class="card std-shadow bg-zinc-800">
-                    <h2 class="card-heading bg-zinc-900">This is a card</h2>
+                <div class="card std-shadow dark:bg-dark-primary">
+                    <h2 class="card-heading dark:bg-dark-secondary">This is a card</h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                         reprehenderit enim labore culpa sint ad nisi Lorem
                         pariatur mollit ex esse exercitation amet.
                     </p>
                 </div>
-                <div class="card std-shadow bg-zinc-800">
-                    <h2 class="card-heading bg-zinc-900">This is a card</h2>
+                <div class="card std-shadow dark:bg-dark-primary">
+                    <h2 class="card-heading dark:bg-dark-secondary">This is a card</h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                         reprehenderit enim labore culpa sint ad nisi Lorem
                         pariatur mollit ex esse exercitation amet.
                     </p>
                 </div>
-                <div class="card std-shadow bg-zinc-800">
-                    <h2 class="card-heading bg-zinc-900">This is a card</h2>
+                <div class="card std-shadow dark:bg-dark-primary">
+                    <h2 class="card-heading dark:bg-dark-secondary">This is a card</h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                         reprehenderit enim labore culpa sint ad nisi Lorem
@@ -91,8 +91,8 @@
                     </p>
                 </div>
 
-                <div class="card std-shadow bg-zinc-800">
-                    <h2 class="card-heading bg-zinc-900">This is a card</h2>
+                <div class="card std-shadow dark:bg-dark-primary">
+                    <h2 class="card-heading dark:bg-dark-secondary">This is a card</h2>
                     <p class="">
                         Lorem ipsum dolor sit amet, officia excepteur ex fugiat
                         reprehenderit enim labore culpa sint ad nisi Lorem
@@ -104,7 +104,7 @@
             <section class="std-container">
                 <!-- TODO: consolidate classes to tailwind -->
                 <div
-                    class="card std-shadow max-w-fit mx-auto relative bg-zinc-700 before:shadow-md before:shadow-black before:rounded before:bg-zinc-700"
+                    class="card std-shadow max-w-fit mx-auto relative dark:bg-zinc-700 before:shadow-md before:shadow-black before:rounded before:dark:bg-zinc-700"
                     id="tooltipDemo"
                     data-tooltip="I'm a tooltip!"
                 >
@@ -121,7 +121,7 @@
         <dialog class="modal" id="loginModal">
             <!-- login form -->
             <form
-                class="form-card-sm bg-zinc-900 text-zinc-200"
+                class="form-card-sm bg-dark-secondary text-dark-primary"
                 method="dialog"
             >
                 <header class="form-header">
@@ -132,7 +132,7 @@
                     <span class="">email</span>
                     <input
                         type="email"
-                        class="form-input bg-zinc-800 focus:border-cyan-500"
+                        class="form-input bg-dark-primary focus:border-cyan-500"
                         placeholder="person@example.com"
                         required
                     />
@@ -142,7 +142,7 @@
                     <span class="">password</span>
                     <input
                         type="password"
-                        class="form-input bg-zinc-800 focus:border-cyan-500"
+                        class="form-input bg-dark-primary focus:border-cyan-500"
                         placeholder="str0ng&c0mplicat3dpa55word"
                         required
                     />
@@ -150,7 +150,7 @@
 
                 <button
                     type="submit"
-                    class="button w-full bg-cyan-500 text-zinc-900"
+                    class="button w-full bg-cyan-500 text-light-primary"
                 >
                     Submit
                 </button>
@@ -174,7 +174,7 @@
         <dialog class="modal" id="registrationModal">
             <!-- registration form -->
             <form
-                class="form-card-sm bg-zinc-900 text-zinc-200"
+                class="form-card-sm bg-dark-secondary text-dark-primary"
                 method="dialog"
             >
                 <header class="form-header">
@@ -186,7 +186,7 @@
                         <span class="">first name</span>
                         <input
                             type="name"
-                            class="form-input bg-zinc-800 focus:border-cyan-500"
+                            class="form-input bg-dark-primary focus:border-cyan-500"
                             placeholder="Terra"
                             required
                         />
@@ -195,7 +195,7 @@
                         <span class="">last name</span>
                         <input
                             type="name"
-                            class="form-input bg-zinc-800 focus:border-cyan-500"
+                            class="form-input bg-dark-primary focus:border-cyan-500"
                             placeholder="Branford"
                             required
                         />
@@ -206,7 +206,7 @@
                     <span class="">email</span>
                     <input
                         type="email"
-                        class="form-input bg-zinc-800 focus:border-cyan-500"
+                        class="form-input bg-dark-primary focus:border-cyan-500"
                         placeholder="person@example.com"
                         required
                     />
@@ -216,7 +216,7 @@
                     <span class="">password</span>
                     <input
                         type="password"
-                        class="form-input bg-zinc-800 focus:border-cyan-500"
+                        class="form-input bg-dark-primary focus:border-cyan-500"
                         placeholder="str0ng&c0mplicat3dpa55word"
                         required
                     />
@@ -226,7 +226,7 @@
                     <span class="">confirm password</span>
                     <input
                         type="password"
-                        class="form-input bg-zinc-800 focus:border-cyan-500"
+                        class="form-input bg-dark-primary focus:border-cyan-500"
                         placeholder="str0ng&c0mplicat3dpa55word"
                         required
                     />
@@ -234,7 +234,7 @@
 
                 <button
                     type="submit"
-                    class="button w-full bg-cyan-500 text-zinc-900"
+                    class="button w-full bg-cyan-500 text-light-primary"
                 >
                     Submit
                 </button>
@@ -243,7 +243,7 @@
 
         <dialog class="modal" id="demoUserModal">
             <!-- demo user login -->
-            <div class="p-12 w-96 rounded bg-zinc-800 text-zinc-200">
+            <div class="p-12 w-96 rounded bg-dark-primary text-dark-primary">
                 <h2 class="pb-12 text-center text-2xl font-bold">Demo Login</h2>
                 <div class="grid grid-cols-2 gap-12">
                     <div>

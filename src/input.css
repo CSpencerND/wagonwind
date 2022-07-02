@@ -88,6 +88,32 @@
      *     @apply fixed inset-0 h-screen w-screen bg-black backdrop-blur bg-opacity-10 grid place-items-center;
      * }
      */
+
+    .text-light-primary {
+        @apply text-zinc-900;
+    }
+    .text-light-secondary {
+        @apply text-zinc-800;
+    }
+    .bg-light-primary {
+        @apply bg-slate-200;
+    }
+    .bg-light-secondary {
+        @apply bg-slate-300;
+    }
+
+    .text-dark-primary {
+        @apply text-zinc-100;
+    }
+    .text-dark-secondary {
+        @apply text-zinc-200;
+    }
+    .bg-dark-primary {
+        @apply bg-zinc-800;
+    }
+    .bg-dark-secondary {
+        @apply bg-zinc-900;
+    }
 }
 
 /* tooltip */

@@ -131,3 +131,8 @@ document.onkeyup = (event) => {
     }
 }
 // }}}
+
+// const darkToggle = document.querySelector("darkToggle")
+// darkToggle.onclick = () => {
+//     html.classList.toggle("dark")
+// }
