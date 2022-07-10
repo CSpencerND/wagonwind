@@ -940,135 +940,73 @@ select {
   }
 }
 
-.slide-from-right {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  left: 66.666667%;
+.nav-menu {
   z-index: 40;
-  --tw-translate-x: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  border-top-left-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-  border-left-width: 1px;
-  padding-top: 4rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+  transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-@media (min-width: 768px) {
-  .slide-from-right {
-    position: static;
-    display: inline-flex;
-    --tw-translate-x: 0px;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .slide-from-right > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px * var(--tw-space-y-reverse));
-  }
-
-  .slide-from-right {
-    border-width: 0px;
-    padding: 0px;
+@media (max-width: 767px) {
+  .nav-menu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 4rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
-.slide-from-left {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 66.666667%;
-  z-index: 40;
-  --tw-translate-x: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
-  border-right-width: 1px;
-  padding-top: 4rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
 @media (min-width: 768px) {
-  .slide-from-left {
-    position: static;
+  .nav-menu {
     display: inline-flex;
-    --tw-translate-x: 0px;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
     align-items: center;
     gap: 1.5rem;
   }
+}
 
-  .slide-from-left > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+/* .slide-from-right { */
+
+/*     @apply translate-x-full left-2/3 rounded-l-xl border-l md:border-0 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6; */
+
+/* } */
+
+@media (max-width: 767px) {
+  .slide-from-right {
+    left: 66.666667%;
+    --tw-translate-x: 100%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    border-left-width: 1px;
+    border-color: currentColor;
   }
 
   .slide-from-left {
-    border-width: 0px;
-    padding: 0px;
-  }
-}
-
-.slide-from-top {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  bottom: 50%;
-  z-index: 40;
-  --tw-translate-y: -100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  border-bottom-right-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-  border-bottom-width: 1px;
-  padding-top: 4rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-@media (min-width: 768px) {
-  .slide-from-top {
-    position: static;
-    display: inline-flex;
-    --tw-translate-y: 0px;
+    right: 66.666667%;
+    --tw-translate-x: -100%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .slide-from-top > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    border-right-width: 1px;
+    border-color: currentColor;
   }
 
   .slide-from-top {
-    border-width: 0px;
-    padding: 0px;
+    bottom: 50%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    --tw-translate-y: -100%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    border-bottom-right-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-width: 1px;
+    border-color: currentColor;
   }
 }
 
@@ -1077,7 +1015,7 @@ select {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-  transition-delay: 150ms;
+  transition-delay: 200ms;
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
@@ -1198,6 +1136,10 @@ select {
      * }
      */
 
+/* NOTE: I think light themes should be heavily dependent on the branding
+     * Dark themes can be more generic and still look good and make sense
+     */
+
 .text-light-primary {
   --tw-text-opacity: 1;
   color: rgb(24 24 27 / var(--tw-text-opacity));
@@ -1205,12 +1147,12 @@ select {
 
 .bg-light-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  background-color: rgb(231 229 228 / var(--tw-bg-opacity));
 }
 
 .bg-light-secondary {
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
 }
 
 .text-action {
@@ -1221,6 +1163,20 @@ select {
 .bg-action {
   --tw-bg-opacity: 1;
   background-color: rgb(8 145 178 / var(--tw-bg-opacity));
+}
+
+.light-primary {
+  --tw-text-opacity: 1;
+  color: rgb(24 24 27 / var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(231 229 228 / var(--tw-bg-opacity));
+}
+
+.light-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(39 39 42 / var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
 }
 
 .sr-only {
@@ -1261,6 +1217,10 @@ select {
   margin-top: 0px;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -1269,12 +1229,28 @@ select {
   display: grid;
 }
 
+.h-6 {
+  height: 1.5rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
 .w-full {
   width: 100%;
 }
 
+.w-6 {
+  width: 1.5rem;
+}
+
 .w-96 {
   width: 24rem;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .max-w-fit {
@@ -1327,10 +1303,6 @@ select {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
@@ -1344,49 +1316,12 @@ select {
   padding-bottom: 1.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .pb-12 {
   padding-bottom: 3rem;
 }
 
-.pt-0 {
-  padding-top: 0px;
-}
-
-.pt-1 {
-  padding-top: 0.25rem;
-}
-
-.pt-2 {
-  padding-top: 0.5rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
-}
-
-.pt-8 {
-  padding-top: 2rem;
-}
-
-.pt-12 {
-  padding-top: 3rem;
-}
-
-.pt-24 {
-  padding-top: 6rem;
-}
-
-.pl-6 {
-  padding-left: 1.5rem;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -1396,11 +1331,6 @@ select {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -1423,6 +1353,15 @@ select {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+/*
+ * regular css below
+ */
+
+* {
+  transition: color 250ms ease-in;
+  transition: background-color 250ms ease-in;
 }
 
 /* tooltip */
@@ -1521,7 +1460,7 @@ select {
 .before\:bg-light-secondary::before {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
 }
 
 .before\:rounded::before {
@@ -1544,7 +1483,7 @@ select {
 
 .hover\:bg-light-secondary:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
 }
 
 .hover\:text-action:hover {
@@ -1588,6 +1527,20 @@ select {
   background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
+.dark .dark\:dark-primary {
+  --tw-text-opacity: 1;
+  color: rgb(244 244 245 / var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:dark-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(228 228 231 / var(--tw-text-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+}
+
 .dark .dark\:bg-zinc-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
@@ -1605,11 +1558,6 @@ select {
 }
 
 @media (min-width: 768px) {
-  .md\:bg-light-secondary {
-    --tw-bg-opacity: 1;
-    background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

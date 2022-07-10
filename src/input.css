@@ -30,17 +30,23 @@
     .hamburger {
         @apply block focus:outline-none z-50 md:hidden;
     }
+    .nav-menu {
+        @apply max-md:text-2xl max-md:pt-16 max-md:fixed max-md:inset-0 z-40 transition-all duration-200 ease-out md:inline-flex md:items-center md:gap-6;
+    }
+    /* .slide-from-right { */
+    /*     @apply translate-x-full left-2/3 rounded-l-xl border-l md:border-0 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6; */
+    /* } */
     .slide-from-right {
-        @apply translate-x-full left-2/3 z-40 rounded-l-xl border-l fixed inset-0 pt-16 transition-all ease-out text-2xl md:border-0 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6;
+        @apply max-md:translate-x-full max-md:left-2/3 max-md:rounded-l-xl max-md:border-l max-md:border-current;
     }
     .slide-from-left {
-        @apply -translate-x-full right-2/3 z-40 rounded-r-xl border-r fixed inset-0 pt-16 transition-all ease-out text-2xl md:border-0 md:static md:p-0 md:space-y-0 md:translate-x-0 md:inline-flex md:items-center md:gap-6;
+        @apply max-md:-translate-x-full max-md:right-2/3 max-md:rounded-r-xl max-md:border-r max-md:border-current;
     }
     .slide-from-top {
-        @apply -translate-y-full bottom-1/2 z-40 rounded-b-xl border-b fixed inset-0 pt-16 transition-all ease-out text-2xl md:border-0 md:static md:p-0 md:space-y-0 md:translate-y-0 md:inline-flex md:items-center md:gap-6;
+        @apply max-md:-translate-y-full max-md:bottom-1/2 max-md:rounded-b-xl max-md:border-b max-md:border-current max-md:h-fit;
     }
     .nav-item {
-        @apply opacity-0 transition-opacity delay-150 ease-in md:opacity-100;
+        @apply opacity-0 transition-opacity delay-200 ease-in md:opacity-100;
     }
     .nav-link {
         @apply px-6 py-4 block md:p-0;
@@ -89,6 +95,10 @@
      * }
      */
 
+    /* NOTE: I think light themes should be heavily dependent on the branding
+     * Dark themes can be more generic and still look good and make sense
+     */
+
     .text-light-primary {
         @apply text-zinc-900;
     }
@@ -96,10 +106,10 @@
         @apply text-zinc-800;
     }
     .bg-light-primary {
-        @apply bg-slate-200;
+        @apply bg-stone-200;
     }
     .bg-light-secondary {
-        @apply bg-slate-300;
+        @apply bg-stone-300;
     }
 
     .text-dark-primary {
@@ -127,6 +137,28 @@
     .outline-action {
         @apply outline-cyan-600;
     }
+
+    .light-primary {
+        @apply bg-light-primary text-light-primary;
+    }
+    .dark-primary {
+        @apply bg-dark-primary text-dark-primary;
+    }
+    .light-secondary {
+        @apply bg-light-secondary text-light-secondary;
+    }
+    .dark-secondary {
+        @apply bg-dark-secondary text-dark-secondary;
+    }
+}
+
+/*
+ * regular css below
+ */
+
+* {
+    transition: color 250ms ease-in;
+    transition: background-color 250ms ease-in;
 }
 
 /* tooltip */
