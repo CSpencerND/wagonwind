@@ -853,7 +853,7 @@ select {
 }
 
 .darken-screen {
-  --tw-shadow: 0 0 0 9999px #000000b3;
+  --tw-shadow: 0 0 0 9999px rgba(0,0,0,0.7);
   --tw-shadow-colored: 0 0 0 9999px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -1136,47 +1136,46 @@ select {
      * }
      */
 
-/* NOTE: I think light themes should be heavily dependent on the branding
+/* NOTE: I think light themes are heavily dependent on the branding
      * Dark themes can be more generic and still look good and make sense
      */
 
-.text-light-primary {
+.color-soft {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 244 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(24 24 27 / var(--tw-text-opacity));
+  color: rgb(41 37 36 / var(--tw-text-opacity));
 }
 
-.bg-light-primary {
+.dark .color-soft {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(244 244 245 / var(--tw-text-opacity));
+}
+
+.color-hard {
   --tw-bg-opacity: 1;
   background-color: rgb(231 229 228 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(41 37 36 / var(--tw-text-opacity));
 }
 
-.bg-light-secondary {
+.dark .color-hard {
   --tw-bg-opacity: 1;
-  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(244 244 245 / var(--tw-text-opacity));
 }
 
 .text-action {
   --tw-text-opacity: 1;
-  color: rgb(8 145 178 / var(--tw-text-opacity));
+  color: rgb(6 182 212 / var(--tw-text-opacity));
 }
 
 .bg-action {
   --tw-bg-opacity: 1;
-  background-color: rgb(8 145 178 / var(--tw-bg-opacity));
-}
-
-.light-primary {
-  --tw-text-opacity: 1;
-  color: rgb(24 24 27 / var(--tw-text-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(231 229 228 / var(--tw-bg-opacity));
-}
-
-.light-secondary {
-  --tw-text-opacity: 1;
-  color: rgb(39 39 42 / var(--tw-text-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
+  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
 }
 
 .sr-only {
@@ -1293,10 +1292,6 @@ select {
   gap: 1rem;
 }
 
-.gap-12 {
-  gap: 3rem;
-}
-
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -1307,17 +1302,13 @@ select {
   border-radius: 0.25rem;
 }
 
-.p-12 {
-  padding: 3rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .text-left {
@@ -1335,6 +1326,11 @@ select {
 
 .font-bold {
   font-weight: 700;
+}
+
+.text-zinc-900 {
+  --tw-text-opacity: 1;
+  color: rgb(24 24 27 / var(--tw-text-opacity));
 }
 
 .opacity-100 {
@@ -1457,12 +1453,6 @@ select {
   transform: rotate(-45deg) translateY(8px) translate(-8px);
 }
 
-.before\:bg-light-secondary::before {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
-}
-
 .before\:rounded::before {
   content: var(--tw-content);
   border-radius: 0.25rem;
@@ -1481,14 +1471,14 @@ select {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
-.hover\:bg-light-secondary:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(214 211 209 / var(--tw-bg-opacity));
-}
-
 .hover\:text-action:hover {
   --tw-text-opacity: 1;
-  color: rgb(8 145 178 / var(--tw-text-opacity));
+  color: rgb(6 182 212 / var(--tw-text-opacity));
+}
+
+.hover\:-translate-y-1:hover {
+  --tw-translate-y: -0.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:scale-105:hover {
@@ -1497,53 +1487,24 @@ select {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:bg-cyan-400:hover {
+.hover\:bg-cyan-500:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(34 211 238 / var(--tw-bg-opacity));
+  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
 }
 
-.hover\:text-cyan-400:hover {
+.hover\:bg-zinc-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
+.hover\:text-cyan-500:hover {
   --tw-text-opacity: 1;
-  color: rgb(34 211 238 / var(--tw-text-opacity));
+  color: rgb(6 182 212 / var(--tw-text-opacity));
 }
 
 .focus\:border-action:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(8 145 178 / var(--tw-border-opacity));
-}
-
-.dark .dark\:text-dark-primary {
-  --tw-text-opacity: 1;
-  color: rgb(244 244 245 / var(--tw-text-opacity));
-}
-
-.dark .dark\:bg-dark-primary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-dark-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:dark-primary {
-  --tw-text-opacity: 1;
-  color: rgb(244 244 245 / var(--tw-text-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:dark-secondary {
-  --tw-text-opacity: 1;
-  color: rgb(228 228 231 / var(--tw-text-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-}
-
-.dark .dark\:bg-zinc-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+  border-color: rgb(6 182 212 / var(--tw-border-opacity));
 }
 
 .dark .before\:dark\:bg-zinc-700::before {
@@ -1552,9 +1513,20 @@ select {
   background-color: rgb(63 63 70 / var(--tw-bg-opacity));
 }
 
-.dark .hover\:dark\:bg-dark-primary:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+@media (max-width: 767px) {
+  .max-md\:color-hard {
+    --tw-bg-opacity: 1;
+    background-color: rgb(231 229 228 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(41 37 36 / var(--tw-text-opacity));
+  }
+
+  .dark .max-md\:color-hard {
+    --tw-bg-opacity: 1;
+    background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(244 244 245 / var(--tw-text-opacity));
+  }
 }
 
 @media (min-width: 768px) {
@@ -1582,6 +1554,14 @@ select {
   }
 }
 
+.\[\&\>\*\]\:rounded>* {
+  border-radius: 0.25rem;
+}
+
+.\[\&\>\*\]\:p-6>* {
+  padding: 1.5rem;
+}
+
 .\[\&\>\*\]\:text-rose-500>* {
   --tw-text-opacity: 1;
   color: rgb(244 63 94 / var(--tw-text-opacity));
@@ -1600,4 +1580,8 @@ select {
 .\[\&\>\*\]\:text-yellow-500>* {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+
+.\[\&\>\*\]\:duration-150>* {
+  transition-duration: 150ms;
 }

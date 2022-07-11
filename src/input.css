@@ -17,7 +17,7 @@
         @apply shadow-md shadow-black;
     }
     .darken-screen {
-        @apply shadow-[0_0_0_9999px_#000000b3];
+        @apply shadow-[0_0_0_9999px_rgba(0,0,0,0.7)];
     }
 
     /* nav */
@@ -95,61 +95,30 @@
      * }
      */
 
-    /* NOTE: I think light themes should be heavily dependent on the branding
+    /* NOTE: I think light themes are heavily dependent on the branding
      * Dark themes can be more generic and still look good and make sense
      */
 
-    .text-light-primary {
-        @apply text-zinc-900;
+    .color-soft {
+        @apply /*dark*/ dark:bg-zinc-800 dark:text-zinc-100 /*light*/ bg-stone-100 text-stone-800;
     }
-    .text-light-secondary {
-        @apply text-zinc-800;
-    }
-    .bg-light-primary {
-        @apply bg-stone-200;
-    }
-    .bg-light-secondary {
-        @apply bg-stone-300;
-    }
-
-    .text-dark-primary {
-        @apply text-zinc-100;
-    }
-    .text-dark-secondary {
-        @apply text-zinc-200;
-    }
-    .bg-dark-primary {
-        @apply bg-zinc-800;
-    }
-    .bg-dark-secondary {
-        @apply bg-zinc-900;
+    .color-hard {
+        @apply /*dark*/ dark:bg-zinc-900 dark:text-zinc-100 /*light*/ bg-stone-200 text-stone-800;
     }
 
     .text-action {
-        @apply text-cyan-600;
+        @apply text-cyan-500;
     }
     .bg-action {
-        @apply bg-cyan-600;
+        @apply bg-cyan-500;
     }
     .border-action {
-        @apply border-cyan-600;
+        @apply border-cyan-500;
     }
     .outline-action {
-        @apply outline-cyan-600;
+        @apply outline-cyan-500;
     }
 
-    .light-primary {
-        @apply bg-light-primary text-light-primary;
-    }
-    .dark-primary {
-        @apply bg-dark-primary text-dark-primary;
-    }
-    .light-secondary {
-        @apply bg-light-secondary text-light-secondary;
-    }
-    .dark-secondary {
-        @apply bg-dark-secondary text-dark-secondary;
-    }
 }
 
 /*

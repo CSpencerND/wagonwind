@@ -9,9 +9,9 @@
         </script>
     </head>
 
-    <body class="light-primary dark:dark-primary">
+    <body class="color-soft">
         <header
-            class="sticky-top std-shadow light-secondary dark:dark-secondary"
+            class="sticky-top std-shadow color-hard"
         >
             <nav class="navbar">
                 <!-- brand logo -->
@@ -36,7 +36,7 @@
                 <!-- toggle menu -->
                 <ul
                     id="navMenu"
-                    class="nav-menu slide-from-right light-secondary dark:dark-secondary"
+                    class="nav-menu slide-from-right max-md:color-hard"
                 >
                     <li
                         class="nav-item hover:text-action hover:bg-light-secondary hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit md:hover:dark:bg-inherit"
@@ -97,10 +97,10 @@
                 class="std-container grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
             >
                 <div
-                    class="card std-shadow bg-light-primary dark:bg-dark-primary"
+                    class="card std-shadow"
                 >
                     <h2
-                        class="card-heading bg-light-secondary dark:bg-dark-secondary"
+                        class="card-heading color-hard"
                     >
                         This is a card
                     </h2>
@@ -111,10 +111,10 @@
                     </p>
                 </div>
                 <div
-                    class="card std-shadow bg-light-primary dark:bg-dark-primary"
+                    class="card std-shadow"
                 >
                     <h2
-                        class="card-heading bg-light-secondary dark:bg-dark-secondary"
+                        class="card-heading color-hard"
                     >
                         This is a card
                     </h2>
@@ -125,10 +125,10 @@
                     </p>
                 </div>
                 <div
-                    class="card std-shadow bg-light-primary dark:bg-dark-primary"
+                    class="card std-shadow"
                 >
                     <h2
-                        class="card-heading bg-light-secondary dark:bg-dark-secondary"
+                        class="card-heading color-hard"
                     >
                         This is a card
                     </h2>
@@ -140,10 +140,10 @@
                 </div>
 
                 <div
-                    class="card std-shadow bg-light-primary dark:bg-dark-primary"
+                    class="card std-shadow"
                 >
                     <h2
-                        class="card-heading bg-light-secondary dark:bg-dark-secondary"
+                        class="card-heading color-hard"
                     >
                         This is a card
                     </h2>
@@ -158,7 +158,7 @@
             <section class="std-container">
                 <!-- TODO: consolidate classes to tailwind -->
                 <div
-                    class="card std-shadow max-w-fit mx-auto relative bg-light-secondary dark:bg-zinc-700 before:shadow-md before:shadow-black before:rounded before:bg-light-secondary before:dark:bg-zinc-700"
+                    class="card std-shadow max-w-fit mx-auto relative color-hard before:shadow-md before:shadow-black before:rounded before:bg-light-secondary before:dark:bg-zinc-700"
                     id="tooltipDemo"
                     data-tooltip="I'm a tooltip!"
                 >
@@ -175,7 +175,7 @@
         <dialog class="modal" id="loginModal">
             <!-- login form -->
             <form
-                class="form-card-sm bg-light-secondary dark:bg-dark-secondary text-light-primary dark:text-dark-primary"
+                class="form-card-sm color-hard"
                 method="dialog"
             >
                 <header class="form-header">
@@ -186,7 +186,7 @@
                     <span class="">email</span>
                     <input
                         type="email"
-                        class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
+                        class="form-input color-soft focus:border-action"
                         placeholder="person@example.com"
                         required
                     />
@@ -196,7 +196,7 @@
                     <span class="">password</span>
                     <input
                         type="password"
-                        class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
+                        class="form-input color-soft focus:border-action"
                         placeholder="str0ng&c0mplicat3dpa55word"
                         required
                     />
@@ -204,23 +204,23 @@
 
                 <button
                     type="submit"
-                    class="button w-full bg-action text-light-primary hover:bg-cyan-400 hover:scale-105 transition-all"
+                    class="button w-full bg-action text-zinc-900 hover:bg-cyan-500 hover:scale-105 transition-all"
                 >
                     Submit
                 </button>
 
                 <footer class="grid grid-cols-2 place-items-center gap-4 my-4">
                     <span
-                        class="cursor-pointer text-action hover:text-cyan-400 transition-colors"
+                        class="cursor-pointer text-action hover:text-cyan-500 transition-colors"
                         >Forgot Password?</span
                     >
                     <span
-                        class="cursor-pointer text-action hover:text-cyan-400 transition-colors"
+                        class="cursor-pointer text-action hover:text-cyan-500 transition-colors"
                         id="registrationButton"
                         >Not A Member?</span
                     >
                     <span
-                        class="col-span-2 cursor-pointer text-action hover:text-cyan-400 transition-colors"
+                        class="col-span-2 cursor-pointer text-action hover:text-cyan-500 transition-colors"
                         id="demoUserModalButton"
                         >Demo User Login</span
                     >
@@ -231,7 +231,7 @@
         <dialog class="modal" id="registrationModal">
             <!-- registration form -->
             <form
-                class="form-card-sm bg-light-secondary dark:bg-dark-secondary text-light-primary dark:text-dark-primary"
+                class="form-card-sm color-hard text-light-primary dark:text-dark-primary"
                 method="dialog"
             >
                 <header class="form-header">
@@ -243,7 +243,7 @@
                         <span class="">first name</span>
                         <input
                             type="name"
-                            class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
+                            class="form-input color-soft focus:border-action"
                             placeholder="Terra"
                             required
                         />
@@ -252,7 +252,7 @@
                         <span class="">last name</span>
                         <input
                             type="name"
-                            class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
+                            class="form-input color-soft focus:border-action"
                             placeholder="Branford"
                             required
                         />
@@ -263,7 +263,7 @@
                     <span class="">email</span>
                     <input
                         type="email"
-                        class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
+                        class="form-input color-soft focus:border-action"
                         placeholder="person@example.com"
                         required
                     />
@@ -273,7 +273,7 @@
                     <span class="">password</span>
                     <input
                         type="password"
-                        class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
+                        class="form-input color-soft focus:border-action"
                         placeholder="str0ng&c0mplicat3dpa55word"
                         required
                     />
@@ -283,7 +283,7 @@
                     <span class="">confirm password</span>
                     <input
                         type="password"
-                        class="form-input bg-light-primary dark:bg-dark-primary focus:border-action"
+                        class="form-input color-soft focus:border-action"
                         placeholder="str0ng&c0mplicat3dpa55word"
                         required
                     />
@@ -291,7 +291,7 @@
 
                 <button
                     type="submit"
-                    class="button w-full bg-action text-light-primary hover:bg-cyan-400 hover:scale-105 transition-all"
+                    class="button w-full bg-action text-zinc-900 hover:bg-cyan-500 hover:scale-105 transition-all"
                 >
                     Submit
                 </button>
@@ -301,11 +301,11 @@
         <dialog class="modal" id="demoUserModal">
             <!-- demo user login -->
             <div
-                class="p-12 w-96 rounded bg-light-secondary dark:bg-dark-primary text-light-primary dark:text-dark-primary"
+                class="p-6 w-96 rounded color-hard"
             >
-                <h2 class="pb-12 text-center text-2xl font-bold">Demo Login</h2>
-                <div class="grid grid-cols-2 gap-12">
-                    <div>
+                <h2 class="p-6 text-center text-2xl font-bold">Demo Login</h2>
+                <div class="grid grid-cols-2 [&>*]:rounded [&>*]:p-6 [&>*]:duration-150">
+                    <div class="hover:bg-zinc-800">
                         <a
                             class="grid place-items-center [&>*]:text-rose-500"
                             href="#"
@@ -325,7 +325,7 @@
                             <h3 class="text-2xl">Admin</h3></a
                         >
                     </div>
-                    <div>
+                    <div class="hover:bg-zinc-800">
                         <a
                             class="grid place-items-center [&>*]:text-purple-500"
                             href="#"
@@ -347,7 +347,7 @@
                             <h3 class="text-2xl">Manager</h3></a
                         >
                     </div>
-                    <div>
+                    <div class="hover:bg-zinc-800">
                         <a
                             class="grid place-items-center [&>*]:text-sky-500"
                             href="#"
@@ -369,7 +369,7 @@
                             <h3 class="text-2xl">Developer</h3></a
                         >
                     </div>
-                    <div>
+                    <div class="hover:bg-zinc-800">
                         <a
                             class="grid place-items-center [&>*]:text-yellow-500"
                             href="#"
