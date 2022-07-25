@@ -14,7 +14,7 @@
         @apply my-4 py-2 px-6 rounded font-bold;
     }
     .std-shadow {
-        @apply shadow-md shadow-black;
+        @apply shadow-std;
     }
     .darken-screen {
         @apply shadow-[0_0_0_9999px_rgba(0,0,0,0.7)];
@@ -60,6 +60,15 @@
         @apply font-bold -mx-4 -mt-4 mb-2 py-2 px-4 rounded-t;
     }
 
+    /* accordion */
+    /* TODO: Adapt to a generic collapse to modularize usage */
+    .accordion-button {
+        @apply py-4 px-4 font-bold w-full text-left;
+    }
+    .accordion-body {
+        @apply card py-0 max-h-0 overflow-hidden transition-all ease-out;
+    }
+
     /* form */
     .form-card-sm {
         @apply py-4 px-8 w-96 rounded;
@@ -99,6 +108,9 @@
      * Dark themes can be more generic and still look good and make sense
      */
 
+    .color-softer {
+        @apply /*dark*/ dark:bg-zinc-700 dark:text-zinc-100 /*light*/ bg-stone-50 text-stone-800;
+    }
     .color-soft {
         @apply /*dark*/ dark:bg-zinc-800 dark:text-zinc-100 /*light*/ bg-stone-100 text-stone-800;
     }
@@ -118,7 +130,6 @@
     .outline-action {
         @apply outline-cyan-500;
     }
-
 }
 
 /*

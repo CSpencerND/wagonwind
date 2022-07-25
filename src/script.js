@@ -1,3 +1,5 @@
+// TODO: Might wanna separate into different files
+
 // {{{ hamburger menu
 const navButton = document.getElementById("menuButton")
 const navMenu = document.getElementById("navMenu")
@@ -158,3 +160,23 @@ darkToggle.addEventListener("click", () => {
     }
 })
 // }}}
+
+// TODO: Adapt to a generic collapse to modularize usage
+// TODO: Use a data attribute on the parent div to toggle whether the others should close
+// {{{ accordion
+const accordions = document.getElementsByClassName("accordion-button")
+for (let accordion of accordions) {
+    accordion.onclick = () => {
+        const content = accordion.nextElementSibling
+        const icon = accordion.firstElementChild
+
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px"
+        }
+
+        icon.classList.toggle("rotate-180")
+    }
+}
+// accordion }}}
