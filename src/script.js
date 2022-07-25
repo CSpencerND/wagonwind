@@ -1,4 +1,5 @@
-// TODO: Might wanna separate into different files
+// FIX: Organize this mess into functions
+// NOTE: Might wanna separate into different files
 
 // {{{ hamburger menu
 const navButton = document.getElementById("menuButton")
@@ -162,7 +163,6 @@ darkToggle.addEventListener("click", () => {
 // }}}
 
 // TODO: Adapt to a generic collapse to modularize usage
-// TODO: Use a data attribute on the parent div to toggle whether the others should close
 // {{{ accordion
 const accordions = document.getElementsByClassName("accordion-button")
 const accordionBodies = Object.values(
