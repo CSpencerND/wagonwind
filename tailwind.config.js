@@ -59,7 +59,7 @@ module.exports = {
                 lg: ["clamp(1.27rem, calc(1.03rem + 1.19vw), 1.88rem)", "1.5"],
                 xl: ["clamp(1.42rem, calc(1.06rem + 1.80vw), 2.34rem)", "1.4"],
                 "2xl": [
-                    "clamp(1.60rem, calc(1.08rem + 2.59vw), 2.93rem)",
+                    "clamp(1.60rem, calc(1.08rem + 2.59vw), 2.73rem)",
                     "1.2",
                 ],
                 "3xl": [

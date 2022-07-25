@@ -135,7 +135,7 @@
             <section class="std-container">
                 <!-- TODO: consolidate classes to tailwind -->
                 <div
-                    class="card std-shadow mx-auto max-w-fit relative color-hard before:shadow-md before:shadow-black before:rounded before:bg-light-secondary before:dark:bg-zinc-700"
+                    class="card std-shadow mx-auto max-w-fit relative color-hard before:shadow-md before:shadow-black before:rounded-md before:bg-light-secondary before:dark:bg-zinc-700"
                     id="tooltipDemo"
                     data-tooltip="I'm a tooltip!"
                 >
@@ -150,9 +150,9 @@
 
             <!-- Accordion Start -->
             <section class="std-container">
-                <div class="accordion std-shadow rounded-t" data-single="true">
+                <div class="accordion std-shadow rounded-t-md" data-single="true">
                     <button
-                        class="color-hard accordion-button rounded-t border-b border-zinc-800 hover:color-softer duration-150 ease-out"
+                        class="color-hard accordion-button rounded-t-md border-b border-zinc-800 hover:color-softer duration-150 ease-out"
                     >
                         Accordion 1
                         <span
@@ -172,7 +172,7 @@
                                 /></svg
                         ></span>
                     </button>
-                    <div class="accordion-body rounded">
+                    <div class="accordion-body rounded-md">
                         <p class="my-4">
                             Lorem ipsum dolor sit amet, officia excepteur ex
                             fugiat reprehenderit enim labore culpa sint ad nisi
@@ -387,10 +387,10 @@
 
         <dialog class="modal" id="demoUserModal">
             <!-- demo user login -->
-            <div class="p-6 w-96 rounded color-hard">
+            <div class="p-6 w-fit rounded-md color-hard">
                 <h2 class="p-6 text-center text-2xl font-bold">Demo Login</h2>
                 <div
-                    class="grid grid-cols-2 [&>*]:rounded [&>*]:p-6 [&>*]:duration-150"
+                    class="grid grid-cols-2 [&>*]:rounded-md [&>*]:p-6 [&>*]:duration-150"
                 >
                     <div class="hover:bg-zinc-800">
                         <a
