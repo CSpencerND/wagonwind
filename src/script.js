@@ -165,10 +165,29 @@ darkToggle.addEventListener("click", () => {
 // TODO: Use a data attribute on the parent div to toggle whether the others should close
 // {{{ accordion
 const accordions = document.getElementsByClassName("accordion-button")
+const accordionBodies = Object.values(
+    document.getElementsByClassName("accordion-body")
+)
+const accordionWrapper = document.querySelector(".accordion")
+const isSingle = accordionWrapper.getAttribute("data-single") === "true"
+
 for (let accordion of accordions) {
     accordion.onclick = () => {
-        const content = accordion.nextElementSibling
         const icon = accordion.firstElementChild
+        const content = accordion.nextElementSibling
+        const accordionSiblings = accordionBodies.filter((body) => {
+            return body != content
+        })
+
+        if (isSingle) {
+            for (let sibling of accordionSiblings) {
+                siblingIcon = sibling.previousElementSibling.firstElementChild
+                if (sibling.style.maxHeight) {
+                    sibling.style.maxHeight = null
+                    siblingIcon.classList.toggle("rotate-180")
+                }
+            }
+        }
 
         if (content.style.maxHeight) {
             content.style.maxHeight = null
