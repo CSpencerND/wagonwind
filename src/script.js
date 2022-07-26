@@ -15,6 +15,14 @@ navButton.addEventListener("click", () => {
         navMenu.classList.toggle("translate-y-0")
     } else if (navMenu.classList.contains("slide-from-left")) {
         navMenu.classList.toggle("translate-x-0")
+    } else if (navMenu.classList.contains("slide-from-under")) {
+        // navMenu.classList.toggle("max-md:border-b")
+        navMenu.classList.toggle("max-md:border-b-current")
+        if (navMenu.style.maxHeight) {
+            navMenu.style.maxHeight = null
+        } else {
+            navMenu.style.maxHeight = navMenu.scrollHeight + "px"
+        }
     }
 
     navMenu.classList.toggle("darken-screen")
