@@ -73,7 +73,7 @@
     .form-card-sm {
         @apply py-4 px-8 w-96 rounded-md;
     }
-    .form-header {
+    .form-heading {
         @apply my-4 text-center text-2xl font-bold;
     }
     .form-label {

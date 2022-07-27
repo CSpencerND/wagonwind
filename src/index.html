@@ -4,6 +4,18 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="color-scheme" content="dark" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+
         <link href="../dist/output.css" rel="stylesheet" />
         <script src="prefersColorScheme.js">
             // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -35,7 +47,7 @@
                 <!-- toggle menu -->
                 <ul
                     id="navMenu"
-                    class="nav-menu slide-from-under max-md:color-hard max-md:text-lg max-md:border-b-transparent"
+                    class="nav-menu slide-from-right max-md:color-hard max-md:text-lg max-md:border-b-transparent"
                 >
                     <li
                         class="nav-item max-md:pt-6 hover:text-action hover:bg-light-secondary hover:dark:bg-dark-primary md:text-base md:hover:bg-inherit md:hover:dark:bg-inherit"
@@ -150,13 +162,15 @@
 
             <!-- Accordion Start -->
             <section class="std-container">
-                <div class="accordion std-shadow rounded-t-md" data-single="true">
+                <div
+                    class="accordion std-shadow rounded-t-md"
+                    data-single="true"
+                >
                     <button
                         class="color-hard accordion-button rounded-t-md border-b border-zinc-800 hover:color-softer duration-150 ease-out"
                     >
                         Accordion 1
-                        <span
-                            class="float-right transition-transform"
+                        <span class="float-right transition-transform"
                             ><svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 class="h-6 w-6"
@@ -262,13 +276,25 @@
         </main>
 
         <!-- modal -->
-        <!-- TODO: add an x to close the modals -->
         <dialog class="modal" id="loginModal">
+            <svg
+                class="modal-close-button h-6 w-6 absolute right-3 top-3 cursor-pointer hover:text-action hover:bg-zinc-700 rounded-full transition-all"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                />
+            </svg>
+
             <!-- login form -->
             <form class="form-card-sm color-hard" method="dialog">
-                <header class="form-header">
-                    <h2 class="">Login</h2>
-                </header>
+                <h2 class="form-heading">Login</h2>
 
                 <label class="form-label">
                     <span class="">email</span>
@@ -317,14 +343,27 @@
         </dialog>
 
         <dialog class="modal" id="registrationModal">
+            <svg
+                class="modal-close-button h-6 w-6 absolute right-3 top-3 cursor-pointer hover:text-action hover:bg-zinc-700 rounded-full transition-all"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                />
+            </svg>
+
             <!-- registration form -->
             <form
                 class="form-card-sm color-hard text-light-primary dark:text-dark-primary"
                 method="dialog"
             >
-                <header class="form-header">
-                    <h2 class="">Register</h2>
-                </header>
+                <h2 class="form-heading">Register</h2>
 
                 <div id="fullName" class="flex space-x-4">
                     <label class="form-label">
@@ -387,6 +426,21 @@
         </dialog>
 
         <dialog class="modal" id="demoUserModal">
+            <svg
+                class="modal-close-button h-6 w-6 absolute right-3 top-3 cursor-pointer hover:text-action hover:bg-zinc-700 rounded-full transition-all"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                />
+            </svg>
+
             <!-- demo user login -->
             <div class="p-6 w-fit rounded-md color-hard">
                 <h2 class="p-6 text-center text-2xl font-bold">Demo Login</h2>

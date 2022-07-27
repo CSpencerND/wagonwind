@@ -143,6 +143,16 @@ document.onkeyup = (event) => {
 }
 // }}}
 
+// modal close buttons {{{
+const modalCloseButtons = document.querySelectorAll(".modal-close-button")
+for (let button of modalCloseButtons) {
+    button.onclick = () => {
+        const modal = button.parentElement
+        modal.close()
+    }
+}
+// modal close buttons }}}
+
 // {{{ dark mode toggle
 const html = document.getElementById("html")
 const darkPath = document.getElementById("darkSvgPath")

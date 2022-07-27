@@ -1101,7 +1101,7 @@ select {
   padding-right: 2rem;
 }
 
-.form-header {
+.form-heading {
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: center;
@@ -1219,8 +1219,20 @@ select {
   border-width: 0;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .relative {
   position: relative;
+}
+
+.right-3 {
+  right: 0.75rem;
+}
+
+.top-3 {
+  top: 0.75rem;
 }
 
 .z-50 {
@@ -1340,6 +1352,10 @@ select {
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-t-md {
@@ -1566,6 +1582,11 @@ select {
   color: rgb(6 182 212 / var(--tw-text-opacity));
 }
 
+.hover\:bg-zinc-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 63 70 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-cyan-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(34 211 238 / var(--tw-bg-opacity));
@@ -1617,11 +1638,6 @@ select {
 
   .max-md\:border-b-current {
     border-bottom-color: currentColor;
-  }
-
-  .max-md\:border-b-red-500 {
-    --tw-border-opacity: 1;
-    border-bottom-color: rgb(239 68 68 / var(--tw-border-opacity));
   }
 
   .max-md\:pt-6 {
