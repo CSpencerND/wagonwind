@@ -1687,6 +1687,18 @@ select {
   background-color: rgb(245 245 244 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-opacity-70:hover {
+  --tw-bg-opacity: 0.7;
+}
+
+.hover\:bg-opacity-50:hover {
+  --tw-bg-opacity: 0.5;
+}
+
+.hover\:bg-opacity-60:hover {
+  --tw-bg-opacity: 0.6;
+}
+
 .hover\:text-cyan-300:hover {
   --tw-text-opacity: 1;
   color: rgb(103 232 249 / var(--tw-text-opacity));
@@ -1695,6 +1707,14 @@ select {
 .hover\:text-stone-800:hover {
   --tw-text-opacity: 1;
   color: rgb(41 37 36 / var(--tw-text-opacity));
+}
+
+.hover\:opacity-75:hover {
+  opacity: 0.75;
+}
+
+.hover\:opacity-50:hover {
+  opacity: 0.5;
 }
 
 .focus\:border-action:focus {
